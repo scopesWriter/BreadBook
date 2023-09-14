@@ -1,0 +1,70 @@
+"statusCode_100" = "Continue";
+"statusCode_101" = ""Switching Protocols"";
+"statusCode_102" = "Processing";
+
+"statusCode_200" = "OK";
+"statusCode_201" = "Created";
+"statusCode_202" = "Accepted";
+"statusCode_203" = "Non-authoritative Information";
+"statusCode_204" = "No Content";
+"statusCode_205" = "Reset Content";
+"statusCode_206" = "Partial Content";
+"statusCode_207" = "Multi-Status";
+"statusCode_208" = "Already Reported";
+"statusCode_226" = "IM Used";
+
+"statusCode_300" = "Multiple Choices";
+"statusCode_301" = "Moved Permanently";
+"statusCode_302" = "Found";
+"statusCode_303" = "See Other";
+"statusCode_304" = "Not Modified";
+"statusCode_305" = "Use Proxy";
+"statusCode_307" = "Temporary Redirect";
+"statusCode_308" = "Permanent Redirect";
+
+"statusCode_400" = "The data from the server is damaged";
+"statusCode_401" = "Please check your authorization.";
+"statusCode_402" = "Payment Required";
+"statusCode_403" = "Please check your authorization.";
+"statusCode_404" = "Not found";
+"statusCode_405" = "Method Not Allowed";
+"statusCode_406" = "Not Acceptable";
+"statusCode_407" = "Proxy Authentication Required";
+"statusCode_408" = "It took too long to load the data, please try again later";
+"statusCode_409" = "Server conflict error";
+"statusCode_410" = "Gone";
+"statusCode_411" = "Length Required";
+"statusCode_412" = "Precondition Failed";
+"statusCode_413" = "Payload Too Large";
+"statusCode_414" = "Request-URI Too Long";
+"statusCode_415" = "Unsupported Media Type";
+"statusCode_416" = "Requested Range Not Satisfiable";
+"statusCode_417" = "Expectation Failed";
+"statusCode_418" = "I'm a teapot";
+"statusCode_421" = "Misdirected Request";
+"statusCode_422" = "Unprocessable Entity";
+"statusCode_423" = "Locked";
+"statusCode_424" = "Failed Dependency";
+"statusCode_426" = "Upgrade Required";
+"statusCode_428" = ""Precondition Required";
+"statusCode_429" = "Too Many Requests";
+"statusCode_431" = "Request Header Fields Too Large";
+"statusCode_444" = "Connection Closed Without Response";
+"statusCode_451" = "Unavailable For Legal Reasons";
+"statusCode_499" = "Client Closed Request";
+
+"statusCode_500" = "Internal Server Error";
+"statusCode_501" = "Not Implemented";
+"statusCode_502" = "Bad Gateway";
+"statusCode_503" = "Service Unavailable";
+"statusCode_504" = "Gateway Timeout";
+"statusCode_505" = ""HTTP Version Not Supported";
+"statusCode_506" = "Variant Also Negotiates";
+"statusCode_507" = "Insufficient Storage";
+"statusCode_508" = "Loop Detected";
+"statusCode_510" = "Not Extended";
+"statusCode_511" = "Network Authentication Required";
+"statusCode_599" = "Network Connection Timeout Error";
+
+"error.GeneralError" = "Something went wrong";
+

@@ -1,0 +1,28 @@
+PODS:
+  - Introspect (0.12.0)
+  - lottie-ios (4.2.0)
+  - netfox (1.21.0)
+  - SwiftLint (0.52.4)
+
+DEPENDENCIES:
+  - Introspect
+  - lottie-ios
+  - netfox
+  - SwiftLint
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - Introspect
+    - lottie-ios
+    - netfox
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Introspect: b66b675de8a85d9ef832f3a710d8e3c7db186884
+  lottie-ios: 809ecf2d460ed650a6aed7aa88b2ec45fab4779c
+  netfox: 9d5cc727fe7576c4c7688a2504618a156b7d44b7
+  SwiftLint: 1cc5cd61ba9bacb2194e340aeb47a2a37fda00b3
+
+PODFILE CHECKSUM: 52804b393d0c3efc7764e7b0bc897e4a4d71d763
+
+COCOAPODS: 1.12.1

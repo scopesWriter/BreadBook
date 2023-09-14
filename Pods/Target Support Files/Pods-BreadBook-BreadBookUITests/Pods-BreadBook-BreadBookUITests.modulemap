@@ -1,0 +1,6 @@
+framework module Pods_BreadBook_BreadBookUITests {
+  umbrella header "Pods-BreadBook-BreadBookUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
