@@ -9,9 +9,10 @@
 import Foundation
 
 class BreadBookAPIClient: BaseAPIClient {
-    
+
     convenience init() {
-        self.init(baseUrl: "https://gorest.co.in/public/v2/")
+        let baseURL: String = "https://gorest.co.in/public/v2/"
+        self.init(baseUrl: baseURL)
     }
     
     func fetchNewsFeed() async -> Result<FeedItems, Error> {

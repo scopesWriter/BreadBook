@@ -159,7 +159,7 @@ struct PostDetailsView: View {
 //                                        VStack {
 //                                            HStack {
 //                                                Text(viewModel.newCommentPlaceholder)
-//                                                    .foregroundColor(Color.originalBlack).opacity(0.5)
+//                                                    .foregroundColor(Color.black).opacity(0.5)
 //                                                Spacer()
 //                                            }
 //                                            .padding(.horizontal, 5)
@@ -220,7 +220,7 @@ struct PostDetailsView: View {
 //                                    } label: {
 //                                        Text("Cancel")
 //                                            .font(BreadBookFont.createFont(weight: .regular, size: 14))
-//                                            .foregroundColor(Color.originalBlack)
+//                                            .foregroundColor(Color.black)
 //                                    }
 //
 //                                    Spacer()
@@ -231,7 +231,7 @@ struct PostDetailsView: View {
 //                                    } label: {
 //                                        Text("Update")
 //                                            .font(BreadBookFont.createFont(weight: .bold, size: 14))
-//                                            .foregroundColor(Color.originalBlack)
+//                                            .foregroundColor(Color.black)
 //                                    }
 //
 //                                    Spacer()
@@ -348,7 +348,7 @@ struct PostDetailsView: View {
                         //Text(viewModel.post?.title ?? "John Doe")
                         Text("John Doe")
                             .font(BreadBookFont.createFont(weight: .bold, size: 14))
-                            .foregroundColor(Color.originalBlack)
+                            .foregroundColor(Color.black)
                             .gesture(
                                 TapGesture().onEnded({ _ in
                                     //viewModel.openProfileBottomSheet()

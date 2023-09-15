@@ -39,7 +39,7 @@ struct FeedView: View {
     var body: some View {
         ZStack(alignment: .top) {
             BreadBookBaseView {
-                Color.pink.edgesIgnoringSafeArea(.all)
+                Color.white.edgesIgnoringSafeArea(.all)
             }
             
             VStack(spacing: 0) {
@@ -100,13 +100,6 @@ struct FeedView: View {
                 
             }
             .onAppear(perform: {
-                
-                NotificationCenter.default.post(
-                    name: NSNotification.Name(Constants.bookmarksBottomSheetNotificationName),
-                    object: nil,
-                    userInfo: [Constants.bookmarksBottomSheetFlag: false]
-                )
-                
                 if viewModel.shouldLoadData {
                     viewModel.didLoad.send()
                     viewModel.shouldLoadData = false
@@ -117,7 +110,7 @@ struct FeedView: View {
                     viewModel.reflectSearchActions = false
                 }
             })
-            .background(Color.primaryVariant)
+            .background(Color.mint)
             .navigationBarHidden(true)
             .navigationBarTitle("", displayMode: .inline)
             
@@ -129,7 +122,7 @@ struct FeedView: View {
                         ZStack {
                             SpinnerView(
                                 configuration: SpinnerConfiguration(
-                                    color: Color.primary700,
+                                    color: Color.pink,
                                     lineWidth: 4,
                                     speed: 1,
                                     delay: 0
@@ -151,7 +144,7 @@ struct FeedView: View {
         }
         .navigationBarHidden(true)
         .navigationBarTitle("", displayMode: .inline)
-    
+        
     }
     
     // MARK: - Top View
@@ -222,11 +215,11 @@ struct FeedView: View {
     // MARK: - Feed List View
     private var feedListView: some View {
         return Group {
-                ScrollView {
-                    LazyVStack {
-                        feedContentView
-                    }
+            ScrollView {
+                LazyVStack {
+                    feedContentView
                 }
+            }
         }
         .listStyle(.plain)
         .buttonStyle(PlainButtonStyle())
@@ -289,9 +282,7 @@ struct FeedView: View {
             
             // MARK: - Feed Items
             ForEach(viewModel.items, id: \.id) { item in
-                switch item {
-                default: drawFeedItem(item: item)
-                }
+                drawFeedItem(item: item)
             }
             
             if viewModel.checkIfEmptySearch() {
@@ -309,44 +300,15 @@ struct FeedView: View {
                 }
             }
             
-            if viewModel.hasMoreData && viewModel.currentPage != 1 {
-                HStack {
-                    Spacer()
-                    ActivityIndicator(isAnimating: $isAnimating, style: .medium)
-                        .onAppear {
-                            viewModel.didLoad.send()
-                        }
-                        .opacity(viewModel.isInitialLoad ? 0:1)
-                    Spacer()
-                }
-            }
-            
             Spacer().frame(height: 100)
             
         }
         
     }
-
+    
     func drawFeedItem(item: FeedViewModel.FeedItemViewModel) -> some View {
         Group {
             switch item {
-            case .filters(let filters):
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 15) {
-                        ForEach(filters) { filter in
-                            let isSelected = filter.id == viewModel.selectedFilterId
-                            FilterChipsView(
-                                state: isSelected ? FilterState.selected : FilterState.default,
-                                isSelected: isSelected,
-                                text: filter.text,
-                                onTap: filter.onTap
-                            )
-                        }
-                    }
-                    .padding(.horizontal)
-                }
-                .padding(.bottom, 20)
-                
             case .item(let item):
                 self.createPostsSection([item], isFeatured: false)
             default: AnyView{}
@@ -354,72 +316,20 @@ struct FeedView: View {
         }
     }
     
-    func drawFiltersSection(_ filters: [FeedFilterViewModel]) -> some View {
-        ScrollView(.horizontal, showsIndicators: false) {
-            HStack(spacing: 15) {
-                ForEach(filters) { filter in
-                    let isSelected = filter.id == viewModel.selectedFilterId
-                    FilterChipsView(
-                        state: isSelected ? FilterState.selected : FilterState.default,
-                        isSelected: isSelected,
-                        text: filter.text,
-                        onTap: filter.onTap
-                    )
-                }
-            }
-            .padding(.horizontal)
-        }
-        .padding(.bottom, 20)
-    }
-    
-    // MARK: - Sections' headers
-    func createSectionHeader(
-        title: String,
-        titleAccessibilityId: String,
-        viewAllAccessibilityId: String = "",
-        viewAllAction: (() -> Void)?) -> some View {
-            
-            VStack {
-                HStack {
-                    Spacer().frame(width: leftPadding)
-                    Text(title)
-                        .font(BreadBookFont.createFont(weight: .bold, size: 14))
-                        .foregroundColor(Color.originalBlack)
-                        .accessibility(identifier: titleAccessibilityId)
-                    Spacer()
-                    if let viewAllAction = viewAllAction {
-                        Button {
-                            viewAllAction()
-                        } label: {
-                            HStack(spacing: 6) {
-                                Text("View all")
-                                    .font(BreadBookFont.createFont(weight: .regular, size: 12))
-                                Image(systemName: "chevron.right")
-                            }
-                            .foregroundColor(Color.originalBlack)
-                        }
-                        .accessibility(identifier: viewAllAccessibilityId)
-                    }
-                    Spacer().frame(width: rightPadding)
-                    
-                }
-            }
-        }
-    
     // MARK: - Featured Posts Section
     private func createPostsSection(_ items: [FeedItem], isFeatured: Bool) -> some View {
         return ForEach(items, id: \.self) { item in
             let currentPost = item
-                FeedPostView(
-                    post: currentPost,
-                    commentsItems: [],
-                    showWriteCommentSection: viewModel.shouldShowWriteCommentSection
-                )
-                .fixedSize(horizontal: false, vertical: true)
-                .onTapGesture {
-                    viewModel.didTapOnPost(item: currentPost)
-                }
-                .listRowBackground(Color.clear)
+            FeedPostView(
+                post: currentPost,
+                commentsItems: [],
+                showWriteCommentSection: viewModel.shouldShowWriteCommentSection
+            )
+            .fixedSize(horizontal: false, vertical: true)
+            .onTapGesture {
+                viewModel.didTapOnPost(item: currentPost)
+            }
+            .listRowBackground(Color.clear)
         }
     }
     
@@ -441,10 +351,10 @@ struct FeedView: View {
                 .padding(.horizontal, 20)
             
             FeedPostView(post: viewModel.createDummyPost(withMedia: false), commentsItems: [], showWriteCommentSection: false, isPlaceholder: true)
-            .fixedSize(horizontal: false, vertical: true)
+                .fixedSize(horizontal: false, vertical: true)
             
             FeedPostView(post: viewModel.createDummyPost(withMedia: true), commentsItems: [], showWriteCommentSection: false, isPlaceholder: true)
-            .fixedSize(horizontal: false, vertical: true)
+                .fixedSize(horizontal: false, vertical: true)
             
             Spacer()
         }.redacted(reason: .placeholder)

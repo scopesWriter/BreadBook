@@ -165,8 +165,6 @@ open class BaseAPIClient : NSObject, URLSessionDelegate {
             
         }
     
-    
-    
 }
 
 public extension BaseAPIClient {
@@ -190,17 +188,16 @@ public extension BaseAPIClient {
                 let statusCode = httpResponse.statusCode
                 
                 //3) Handle status codes for different error types.
-                if 200...204 ~= statusCode{
+                if 200...204 ~= statusCode {
                     do {
                         if let data = data {
-                            let result = try JSONDecoder().decode(EvaAPIResponse<T>.self, from: data)
+                            let result = try JSONDecoder().decode(T.self, from: data)
+                            completion?(.success(result))
                             
-                            if let resultData = result.data {
-                                completion?(.success(resultData))
-                            }
-                            else{
-                                completion?(.failure(APIError.serverError(result.message ?? "", result.errorList ?? [])))
-                            }
+//                            if let resultData = result.data {
+//                            } else {
+//                                completion?(.failure(APIError.serverError(result.message ?? "", result.errorList ?? [])))
+//                            }
                         }
                         else {
                             

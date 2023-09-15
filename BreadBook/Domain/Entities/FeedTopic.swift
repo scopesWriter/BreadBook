@@ -33,11 +33,7 @@ enum UserActivityType: Int, Codable {
 }
 
 enum FeedItemType: Int, Codable {
-    case article = 1
     case postWithTextOnly = 2
-    case postWithMediaOnly = 3
-    case postWithMediaAndText = 4
-    case podcast = 5
 }
 
 // MARK: - MediaListItem

@@ -15,8 +15,8 @@ final class MainTabCoordinator: TabCoordinatable {
     // Feed
     @Route(tabItem: makeFeedTab, onTapped: onFeedTapped) var feed = makeFeed
     @ViewBuilder private func makeFeedTab(isActive: Bool) -> some View {
-            Image("Home")
-            Text("Feed")
+        Image(Icon.comment.rawValue)
+        Text("Feed")
     }
     private func makeFeed() -> NavigationViewCoordinator<FeedCoordinator> {
         NavigationViewCoordinator(FeedCoordinator())

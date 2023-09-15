@@ -32,7 +32,6 @@ enum BreadBookFontWeight: String {
 
 struct BreadBookFont {
     static func createFont(name: BreadBookFontName = .bwModelica, weight: BreadBookFontWeight, size: CGFloat) -> Font {
-        
         var fontName = "\(name.rawValue)-\(weight.rawValue.capitalizingFirstLetter())"
         return Font.custom(fontName, size: size)
     }

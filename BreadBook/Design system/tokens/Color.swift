@@ -20,6 +20,7 @@ extension Color {
     static let neutral300 = Color("neutral300")
     static let neutral400 = Color("neutral400")
     static let neutral600 = Color("neutral600")
+    static let mintGreen = Color("MintGreen")
 
     // States
     static let success = Color("success")
@@ -32,7 +33,7 @@ extension Color {
     static let cardShadow = Color.black.opacity(0.11)
     
     // Text
-    static let whiteText = Color("whiteText")
+    static let whiteText = Color.white
     
     static let primaryShades100 = Color("Button shaded background")
 

@@ -9,9 +9,9 @@ import Foundation
 
 @available(macOS 10.15,iOS 13.0, *)
 public extension BaseAPIClient {
-    func createTaskAndHandleResponseHelper<T:Decodable>(withUrlRequest request: URLRequest,
-                                                        apiConfig: APIConfigurationDelegate,
-                                                        unauthorizedHandler: @escaping () async -> Result<T,Error>) async -> Result<T,Error> {
+    func createTaskAndHandleResponseHelper<T: Decodable>(withUrlRequest request: URLRequest,
+                                                         apiConfig: APIConfigurationDelegate,
+                                                         unauthorizedHandler: @escaping () async -> Result<T,Error>) async -> Result<T,Error> {
         
         do {
             let taskResponse = try await urlSession?.data(for: request)
@@ -25,16 +25,9 @@ public extension BaseAPIClient {
                     guard let data = taskResponse?.0 else {
                         return .failure(APIError.generalError)
                     }
-                    let result = try JSONDecoder().decode(EvaAPIResponse<T>.self, from: data)
+                    let result = try JSONDecoder().decode(T.self, from: data)
                     
-                    
-                    
-                    if let resultData = result.data {
-                        return .success(resultData)
-                    }
-                    else{
-                        return .failure(APIError.serverError(result.message ?? "", result.errorList ?? []))
-                    }
+                    return .success(result)
                 } catch {
                     return .failure(APIError.decodingError(statusCode: statusCode))
                 }

@@ -69,4 +69,5 @@ enum Icon: String {
     case bookmarkUnfilled = "Bookmark Unfilled"
     case backButton = "Back Button"
     case send
+    case feed = "TabViewFeed"
 }

@@ -134,8 +134,7 @@ struct FeedPostView: View {
     // MARK: Content View
     private var contentView: some View {
         VStack {
-            if post.type == .postWithTextOnly ||
-                post.type == .postWithMediaAndText {
+            if post.type == .postWithTextOnly {
                 HStack {
                     Spacer().frame(width: 20)
                     TruncatingText(post.text, lineLimit: 2, hasLinks: true)
@@ -144,76 +143,6 @@ struct FeedPostView: View {
                     Spacer(minLength: 20)
                 }
                 Spacer().frame(height: post.type == .postWithTextOnly ? 10 : 25)
-                              
-            }
-            if post.type == .postWithMediaAndText ||
-                post.type == .postWithMediaOnly {
-                let media = post.mediaList
-                if !media.isEmpty {
-                    if media[0].mediaTypeId == .image {
-                        if media.count == 1 {
-                            NetworkImageView(withURL: media[0].mediaUrl,
-                                             aspectRatio: false,
-                                             isClipped: true)
-                            .frame(maxHeight: UIScreen.main.bounds.width - 20)
-                            .contentShape(Rectangle())
-                            .clipped()
-                            .overlay(Color.clear)
-                            
-                        } else {
-                            TabView(selection: $chosenIndex) {
-                                ForEach(Array(zip(post.mediaList.indices, post.mediaList)), id: \.0) { index, media in
-                                    NetworkImageView(
-                                        withURL: media.mediaUrl,
-                                        aspectRatio: false,
-                                        isClipped: true
-                                    )
-                                    .contentShape(Rectangle())
-                                    .clipped()
-                                    .overlay(Color.clear)
-                                    .tag(index)
-                                }
-                            }
-                            .tabViewStyle(.page(indexDisplayMode: .never))
-                            .frame(height: UIScreen.main.bounds.width - 20)
-                            
-                        }
-                    } else {
-                        // Video
-                        if media.count > 0 {
-                            Button {
-                                videoUrl = URL(string: "\(media[0].mediaUrl)\(AppConstants.streamingFormat)")
-                                showVideo = true
-                            } label: {
-                                ZStack {
-                                    NetworkImageView(withURL: media[0].thumbnailUrl,
-                                                     aspectRatio: false,
-                                                     isClipped: true
-                                    )
-                                    .frame(maxHeight: UIScreen.main.bounds.width - 20)
-                                    .clipped()
-                                    .overlay(Color.clear)
-                                    HStack {
-                                        Spacer()
-                                        Image(Icon.playVideo.rawValue)
-                                            .resizable()
-                                            .frame(width: 50, height: 50, alignment: .center)
-                                        Spacer()
-                                    }
-                                }
-                            }
-                            .frame(maxHeight: UIScreen.main.bounds.width - 20)
-                            .contentShape(Rectangle())
-                            .clipped()
-                            .overlay(Color.clear)
-                                ZStack {}
-                                    .fullScreenCover(isPresented: $showVideo) {
-//                                        AVPlayerView(videoURL: self.$videoUrl)
-//                                            .edgesIgnoringSafeArea(.all)
-                                    }
-                        }
-                    }
-                }
             }
         }
     }

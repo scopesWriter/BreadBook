@@ -51,7 +51,7 @@ struct ErrorView: View {
             }
             .frame(width: 98, height: 37)
             .foregroundColor(type == .connectionError ? Color.primary : Color.white)
-            .background(type == .connectionError ? Color.clear : Color.primary)
+            .background(type == .connectionError ? Color.clear : Color.pink)
             .clipShape(Capsule())
             .accessibility(identifier: "")
             

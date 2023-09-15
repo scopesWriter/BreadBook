@@ -21,6 +21,7 @@ class FeedRepository: FeedRepositoryProtocol {
         let result = await apiClient.fetchNewsFeed()
         switch result {
         case .success(let response):
+            // Save in UserDefaults in case needed...
             BreadBookStorage.newsfeedItems = response
             return .success(response)
         case .failure(let error):

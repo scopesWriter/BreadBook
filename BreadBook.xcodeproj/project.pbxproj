@@ -110,6 +110,36 @@
 		A44A9EE82AB368A200629301 /* StoragePropertyWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9EE72AB368A200629301 /* StoragePropertyWrapper.swift */; };
 		A45F86762AB397F000A21924 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A45F86752AB397F000A21924 /* PostViewModel.swift */; };
 		A466737A2AB3B13F0059F2E9 /* animation_lmjofvwu.json in Resources */ = {isa = PBXBuildFile; fileRef = A46673792AB3B13F0059F2E9 /* animation_lmjofvwu.json */; };
+		A49B08812AB3D389007C337F /* IBMPlexSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08732AB3D385007C337F /* IBMPlexSans-LightItalic.ttf */; };
+		A49B08822AB3D389007C337F /* IBMPlexSans-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08742AB3D386007C337F /* IBMPlexSans-ExtraLightItalic.ttf */; };
+		A49B08832AB3D389007C337F /* IBMPlexSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08752AB3D386007C337F /* IBMPlexSans-SemiBold.ttf */; };
+		A49B08842AB3D389007C337F /* IBMPlexSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08762AB3D386007C337F /* IBMPlexSans-Medium.ttf */; };
+		A49B08852AB3D389007C337F /* IBMPlexSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08772AB3D386007C337F /* IBMPlexSans-BoldItalic.ttf */; };
+		A49B08862AB3D389007C337F /* IBMPlexSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08782AB3D387007C337F /* IBMPlexSans-Light.ttf */; };
+		A49B08872AB3D389007C337F /* IBMPlexSans-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08792AB3D387007C337F /* IBMPlexSans-ThinItalic.ttf */; };
+		A49B08882AB3D389007C337F /* IBMPlexSans-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B087A2AB3D387007C337F /* IBMPlexSans-ExtraLight.ttf */; };
+		A49B08892AB3D389007C337F /* IBMPlexSans-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B087B2AB3D388007C337F /* IBMPlexSans-MediumItalic.ttf */; };
+		A49B088A2AB3D389007C337F /* IBMPlexSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B087C2AB3D388007C337F /* IBMPlexSans-Regular.ttf */; };
+		A49B088B2AB3D389007C337F /* IBMPlexSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B087D2AB3D388007C337F /* IBMPlexSans-Bold.ttf */; };
+		A49B088C2AB3D389007C337F /* IBMPlexSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B087E2AB3D388007C337F /* IBMPlexSans-Italic.ttf */; };
+		A49B088D2AB3D389007C337F /* IBMPlexSans-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B087F2AB3D389007C337F /* IBMPlexSans-SemiBoldItalic.ttf */; };
+		A49B088E2AB3D389007C337F /* IBMPlexSans-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08802AB3D389007C337F /* IBMPlexSans-Thin.ttf */; };
+		A49B089F2AB3D3A4007C337F /* BwModelica-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B088F2AB3D3A0007C337F /* BwModelica-Medium.otf */; };
+		A49B08A02AB3D3A4007C337F /* BwModelica-LightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08902AB3D3A0007C337F /* BwModelica-LightItalic.otf */; };
+		A49B08A12AB3D3A4007C337F /* BwModelica-ExtraBoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08912AB3D3A1007C337F /* BwModelica-ExtraBoldItalic.otf */; };
+		A49B08A22AB3D3A4007C337F /* BwModelica-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08922AB3D3A1007C337F /* BwModelica-Black.otf */; };
+		A49B08A32AB3D3A4007C337F /* BwModelica-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08932AB3D3A1007C337F /* BwModelica-Regular.otf */; };
+		A49B08A42AB3D3A4007C337F /* BwModelica-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08942AB3D3A1007C337F /* BwModelica-Thin.otf */; };
+		A49B08A52AB3D3A4007C337F /* BwModelica-BlackItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08952AB3D3A2007C337F /* BwModelica-BlackItalic.otf */; };
+		A49B08A62AB3D3A4007C337F /* BwModelica-RegularItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08962AB3D3A2007C337F /* BwModelica-RegularItalic.otf */; };
+		A49B08A72AB3D3A4007C337F /* BwModelica-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08972AB3D3A2007C337F /* BwModelica-Hairline.otf */; };
+		A49B08A82AB3D3A4007C337F /* BwModelica-ThinItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08982AB3D3A2007C337F /* BwModelica-ThinItalic.otf */; };
+		A49B08A92AB3D3A4007C337F /* BwModelica-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B08992AB3D3A3007C337F /* BwModelica-Bold.otf */; };
+		A49B08AA2AB3D3A4007C337F /* BwModelica-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B089A2AB3D3A3007C337F /* BwModelica-MediumItalic.otf */; };
+		A49B08AB2AB3D3A4007C337F /* BwModelica-HairlineItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B089B2AB3D3A3007C337F /* BwModelica-HairlineItalic.otf */; };
+		A49B08AC2AB3D3A4007C337F /* BwModelica-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B089C2AB3D3A4007C337F /* BwModelica-Light.otf */; };
+		A49B08AD2AB3D3A4007C337F /* BwModelica-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B089D2AB3D3A4007C337F /* BwModelica-ExtraBold.otf */; };
+		A49B08AE2AB3D3A4007C337F /* BwModelica-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A49B089E2AB3D3A4007C337F /* BwModelica-BoldItalic.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +267,37 @@
 		A44A9EE72AB368A200629301 /* StoragePropertyWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoragePropertyWrapper.swift; sourceTree = "<group>"; };
 		A45F86752AB397F000A21924 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		A46673792AB3B13F0059F2E9 /* animation_lmjofvwu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = animation_lmjofvwu.json; sourceTree = "<group>"; };
+		A49B08732AB3D385007C337F /* IBMPlexSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		A49B08742AB3D386007C337F /* IBMPlexSans-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		A49B08752AB3D386007C337F /* IBMPlexSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBold.ttf"; sourceTree = "<group>"; };
+		A49B08762AB3D386007C337F /* IBMPlexSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Medium.ttf"; sourceTree = "<group>"; };
+		A49B08772AB3D386007C337F /* IBMPlexSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		A49B08782AB3D387007C337F /* IBMPlexSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Light.ttf"; sourceTree = "<group>"; };
+		A49B08792AB3D387007C337F /* IBMPlexSans-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ThinItalic.ttf"; sourceTree = "<group>"; };
+		A49B087A2AB3D387007C337F /* IBMPlexSans-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-ExtraLight.ttf"; sourceTree = "<group>"; };
+		A49B087B2AB3D388007C337F /* IBMPlexSans-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-MediumItalic.ttf"; sourceTree = "<group>"; };
+		A49B087C2AB3D388007C337F /* IBMPlexSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Regular.ttf"; sourceTree = "<group>"; };
+		A49B087D2AB3D388007C337F /* IBMPlexSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Bold.ttf"; sourceTree = "<group>"; };
+		A49B087E2AB3D388007C337F /* IBMPlexSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Italic.ttf"; sourceTree = "<group>"; };
+		A49B087F2AB3D389007C337F /* IBMPlexSans-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		A49B08802AB3D389007C337F /* IBMPlexSans-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "IBMPlexSans-Thin.ttf"; sourceTree = "<group>"; };
+		A49B088F2AB3D3A0007C337F /* BwModelica-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-Medium.otf"; sourceTree = "<group>"; };
+		A49B08902AB3D3A0007C337F /* BwModelica-LightItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-LightItalic.otf"; sourceTree = "<group>"; };
+		A49B08912AB3D3A1007C337F /* BwModelica-ExtraBoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-ExtraBoldItalic.otf"; sourceTree = "<group>"; };
+		A49B08922AB3D3A1007C337F /* BwModelica-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-Black.otf"; sourceTree = "<group>"; };
+		A49B08932AB3D3A1007C337F /* BwModelica-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-Regular.otf"; sourceTree = "<group>"; };
+		A49B08942AB3D3A1007C337F /* BwModelica-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-Thin.otf"; sourceTree = "<group>"; };
+		A49B08952AB3D3A2007C337F /* BwModelica-BlackItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-BlackItalic.otf"; sourceTree = "<group>"; };
+		A49B08962AB3D3A2007C337F /* BwModelica-RegularItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-RegularItalic.otf"; sourceTree = "<group>"; };
+		A49B08972AB3D3A2007C337F /* BwModelica-Hairline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-Hairline.otf"; sourceTree = "<group>"; };
+		A49B08982AB3D3A2007C337F /* BwModelica-ThinItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-ThinItalic.otf"; sourceTree = "<group>"; };
+		A49B08992AB3D3A3007C337F /* BwModelica-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-Bold.otf"; sourceTree = "<group>"; };
+		A49B089A2AB3D3A3007C337F /* BwModelica-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-MediumItalic.otf"; sourceTree = "<group>"; };
+		A49B089B2AB3D3A3007C337F /* BwModelica-HairlineItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-HairlineItalic.otf"; sourceTree = "<group>"; };
+		A49B089C2AB3D3A4007C337F /* BwModelica-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-Light.otf"; sourceTree = "<group>"; };
+		A49B089D2AB3D3A4007C337F /* BwModelica-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-ExtraBold.otf"; sourceTree = "<group>"; };
+		A49B089E2AB3D3A4007C337F /* BwModelica-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BwModelica-BoldItalic.otf"; sourceTree = "<group>"; };
+		A49B08AF2AB3D3FA007C337F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		AD99901F3066CCD139C7BEF3 /* Pods-BreadBook-BreadBookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadBook-BreadBookUITests.release.xcconfig"; path = "Target Support Files/Pods-BreadBook-BreadBookUITests/Pods-BreadBook-BreadBookUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1F5795795360E83E8A3FBEE /* Pods-BreadBookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadBookTests.debug.xcconfig"; path = "Target Support Files/Pods-BreadBookTests/Pods-BreadBookTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BFB9928089738BCB6FF7AB01 /* Pods-BreadBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BreadBook.release.xcconfig"; path = "Target Support Files/Pods-BreadBook/Pods-BreadBook.release.xcconfig"; sourceTree = "<group>"; };
@@ -310,6 +371,7 @@
 		A44A9DB32AB2F50700629301 /* BreadBook */ = {
 			isa = PBXGroup;
 			children = (
+				A49B08AF2AB3D3FA007C337F /* Info.plist */,
 				A44A9E4B2AB3177600629301 /* Design system */,
 				A44A9DBA2AB2F50900629301 /* Preview Content */,
 				A44A9DDF2AB2F54500629301 /* Data */,
@@ -375,6 +437,7 @@
 		A44A9DE12AB2F55100629301 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A49B08702AB3D34B007C337F /* Fonts */,
 				A46673792AB3B13F0059F2E9 /* animation_lmjofvwu.json */,
 				A44A9DB82AB2F50900629301 /* Assets.xcassets */,
 			);
@@ -898,6 +961,59 @@
 			path = UserDefaults;
 			sourceTree = "<group>";
 		};
+		A49B08702AB3D34B007C337F /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A49B08722AB3D36B007C337F /* IBM */,
+				A49B08712AB3D364007C337F /* BWModelica */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		A49B08712AB3D364007C337F /* BWModelica */ = {
+			isa = PBXGroup;
+			children = (
+				A49B08922AB3D3A1007C337F /* BwModelica-Black.otf */,
+				A49B08952AB3D3A2007C337F /* BwModelica-BlackItalic.otf */,
+				A49B08992AB3D3A3007C337F /* BwModelica-Bold.otf */,
+				A49B089E2AB3D3A4007C337F /* BwModelica-BoldItalic.otf */,
+				A49B089D2AB3D3A4007C337F /* BwModelica-ExtraBold.otf */,
+				A49B08912AB3D3A1007C337F /* BwModelica-ExtraBoldItalic.otf */,
+				A49B08972AB3D3A2007C337F /* BwModelica-Hairline.otf */,
+				A49B089B2AB3D3A3007C337F /* BwModelica-HairlineItalic.otf */,
+				A49B089C2AB3D3A4007C337F /* BwModelica-Light.otf */,
+				A49B08902AB3D3A0007C337F /* BwModelica-LightItalic.otf */,
+				A49B088F2AB3D3A0007C337F /* BwModelica-Medium.otf */,
+				A49B089A2AB3D3A3007C337F /* BwModelica-MediumItalic.otf */,
+				A49B08932AB3D3A1007C337F /* BwModelica-Regular.otf */,
+				A49B08962AB3D3A2007C337F /* BwModelica-RegularItalic.otf */,
+				A49B08942AB3D3A1007C337F /* BwModelica-Thin.otf */,
+				A49B08982AB3D3A2007C337F /* BwModelica-ThinItalic.otf */,
+			);
+			path = BWModelica;
+			sourceTree = "<group>";
+		};
+		A49B08722AB3D36B007C337F /* IBM */ = {
+			isa = PBXGroup;
+			children = (
+				A49B087D2AB3D388007C337F /* IBMPlexSans-Bold.ttf */,
+				A49B08772AB3D386007C337F /* IBMPlexSans-BoldItalic.ttf */,
+				A49B087A2AB3D387007C337F /* IBMPlexSans-ExtraLight.ttf */,
+				A49B08742AB3D386007C337F /* IBMPlexSans-ExtraLightItalic.ttf */,
+				A49B087E2AB3D388007C337F /* IBMPlexSans-Italic.ttf */,
+				A49B08782AB3D387007C337F /* IBMPlexSans-Light.ttf */,
+				A49B08732AB3D385007C337F /* IBMPlexSans-LightItalic.ttf */,
+				A49B08762AB3D386007C337F /* IBMPlexSans-Medium.ttf */,
+				A49B087B2AB3D388007C337F /* IBMPlexSans-MediumItalic.ttf */,
+				A49B087C2AB3D388007C337F /* IBMPlexSans-Regular.ttf */,
+				A49B08752AB3D386007C337F /* IBMPlexSans-SemiBold.ttf */,
+				A49B087F2AB3D389007C337F /* IBMPlexSans-SemiBoldItalic.ttf */,
+				A49B08802AB3D389007C337F /* IBMPlexSans-Thin.ttf */,
+				A49B08792AB3D387007C337F /* IBMPlexSans-ThinItalic.ttf */,
+			);
+			path = IBM;
+			sourceTree = "<group>";
+		};
 		BE779B9198A68B80AF5E8E38 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1025,9 +1141,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A49B08862AB3D389007C337F /* IBMPlexSans-Light.ttf in Resources */,
+				A49B08852AB3D389007C337F /* IBMPlexSans-BoldItalic.ttf in Resources */,
+				A49B088D2AB3D389007C337F /* IBMPlexSans-SemiBoldItalic.ttf in Resources */,
+				A49B088B2AB3D389007C337F /* IBMPlexSans-Bold.ttf in Resources */,
+				A49B08A02AB3D3A4007C337F /* BwModelica-LightItalic.otf in Resources */,
+				A49B08892AB3D389007C337F /* IBMPlexSans-MediumItalic.ttf in Resources */,
+				A49B08AC2AB3D3A4007C337F /* BwModelica-Light.otf in Resources */,
+				A49B08812AB3D389007C337F /* IBMPlexSans-LightItalic.ttf in Resources */,
+				A49B08A42AB3D3A4007C337F /* BwModelica-Thin.otf in Resources */,
+				A49B08A62AB3D3A4007C337F /* BwModelica-RegularItalic.otf in Resources */,
+				A49B08A52AB3D3A4007C337F /* BwModelica-BlackItalic.otf in Resources */,
+				A49B08AB2AB3D3A4007C337F /* BwModelica-HairlineItalic.otf in Resources */,
 				A466737A2AB3B13F0059F2E9 /* animation_lmjofvwu.json in Resources */,
+				A49B088C2AB3D389007C337F /* IBMPlexSans-Italic.ttf in Resources */,
 				A44A9DBC2AB2F50900629301 /* Preview Assets.xcassets in Resources */,
+				A49B08882AB3D389007C337F /* IBMPlexSans-ExtraLight.ttf in Resources */,
 				A44A9DB92AB2F50900629301 /* Assets.xcassets in Resources */,
+				A49B08A12AB3D3A4007C337F /* BwModelica-ExtraBoldItalic.otf in Resources */,
+				A49B08A32AB3D3A4007C337F /* BwModelica-Regular.otf in Resources */,
+				A49B08AA2AB3D3A4007C337F /* BwModelica-MediumItalic.otf in Resources */,
+				A49B088E2AB3D389007C337F /* IBMPlexSans-Thin.ttf in Resources */,
+				A49B08832AB3D389007C337F /* IBMPlexSans-SemiBold.ttf in Resources */,
+				A49B08A92AB3D3A4007C337F /* BwModelica-Bold.otf in Resources */,
+				A49B089F2AB3D3A4007C337F /* BwModelica-Medium.otf in Resources */,
+				A49B08AD2AB3D3A4007C337F /* BwModelica-ExtraBold.otf in Resources */,
+				A49B08822AB3D389007C337F /* IBMPlexSans-ExtraLightItalic.ttf in Resources */,
+				A49B088A2AB3D389007C337F /* IBMPlexSans-Regular.ttf in Resources */,
+				A49B08872AB3D389007C337F /* IBMPlexSans-ThinItalic.ttf in Resources */,
+				A49B08AE2AB3D3A4007C337F /* BwModelica-BoldItalic.otf in Resources */,
+				A49B08842AB3D389007C337F /* IBMPlexSans-Medium.ttf in Resources */,
+				A49B08A82AB3D3A4007C337F /* BwModelica-ThinItalic.otf in Resources */,
+				A49B08A72AB3D3A4007C337F /* BwModelica-Hairline.otf in Resources */,
+				A49B08A22AB3D3A4007C337F /* BwModelica-Black.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1409,6 +1555,7 @@
 				DEVELOPMENT_TEAM = Y7QVJK56J6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BreadBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1439,6 +1586,7 @@
 				DEVELOPMENT_TEAM = Y7QVJK56J6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BreadBook/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

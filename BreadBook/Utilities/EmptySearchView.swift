@@ -26,11 +26,11 @@ struct EmptySearchView: View {
                     .frame(width: 135, height: 131)
                 Text(title)
                     .font(BreadBookFont.createFont(weight: .regular, size: 14))
-                    .foregroundColor(Color.originalBlack)
+                    .foregroundColor(Color.black)
                 if !subTitle.isEmpty {
                 Text(subTitle)
                     .font(BreadBookFont.createFont(weight: .medium, size: 14))
-                    .foregroundColor(Color.originalBlack)
+                    .foregroundColor(Color.black)
                 }
                 
             }

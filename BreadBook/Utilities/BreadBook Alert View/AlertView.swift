@@ -68,7 +68,7 @@ struct AlertView: View {
                     .font(BreadBookFont.createFont(weight: .bold, size: 14))
             }
             .frame(height: 50)
-            .foregroundColor(button.isCancellableAction ? Color.originalBlack : button.foregroundColor)
+            .foregroundColor(button.isCancellableAction ? Color.black : button.foregroundColor)
             .background(button.isCancellableAction ? Color.neutral200 : button.backgroundColor)
             .clipShape(Capsule())
             .accessibility(identifier: button.accessibilityId)
