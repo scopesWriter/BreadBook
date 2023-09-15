@@ -22,7 +22,7 @@ class FeedViewModel: BaseViewModel, ObservableObject {
     @RouterObject var router: NavigationRouter<FeedCoordinator>?
     
     // MARK: - Properties
-    private let repo: FeedRepositoryProtocol
+    let repo: FeedRepositoryProtocol
     var shouldLoadData: Bool
     var shouldShowWriteCommentSection: Bool
     
