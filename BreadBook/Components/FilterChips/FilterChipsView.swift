@@ -29,7 +29,7 @@ struct FilterChipsView: View {
     }
     
     var body: some View {
-    
+        
         Button {
             onTap()
         } label: {
@@ -50,11 +50,10 @@ struct FilterChipsView: View {
 
 struct FilterChipsView_Previews: PreviewProvider {
     static var previews: some View {
+        FilterChipsView(state: FilterState.selected,
+                        isSelected: true,
+                        text: "All") {
             
-            FilterChipsView(state: FilterState.selected,
-                            isSelected: true,
-                            text: "All") {
-                
-            }
+        }
     }
 }

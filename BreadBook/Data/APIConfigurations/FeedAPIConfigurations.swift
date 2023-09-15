@@ -8,6 +8,7 @@
 import Foundation
 
 enum FeedAPIConfiguration: APIConfigurationDelegate {
+    
     case getNewsfeed
     case getComments
     
@@ -40,4 +41,5 @@ enum FeedAPIConfiguration: APIConfigurationDelegate {
             return .plainRequest
         }
     }
+    
 }

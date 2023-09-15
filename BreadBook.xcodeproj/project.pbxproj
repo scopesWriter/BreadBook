@@ -12,6 +12,8 @@
 		9C5A40C3D9BBCC35850F302C /* Pods_BreadBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AA0CEB266C39764DE7645D0 /* Pods_BreadBook.framework */; };
 		A449E50A2AB483D3005E9EE7 /* View+UUIDs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449E5092AB483D3005E9EE7 /* View+UUIDs.swift */; };
 		A449E50C2AB48864005E9EE7 /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449E50B2AB48864005E9EE7 /* Toast.swift */; };
+		A449E50E2AB4B96E005E9EE7 /* CommentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449E50D2AB4B96E005E9EE7 /* CommentModel.swift */; };
+		A449E5102AB4B9B0005E9EE7 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A449E50F2AB4B9B0005E9EE7 /* PostModel.swift */; };
 		A44A9DB92AB2F50900629301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44A9DB82AB2F50900629301 /* Assets.xcassets */; };
 		A44A9DBC2AB2F50900629301 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A44A9DBB2AB2F50900629301 /* Preview Assets.xcassets */; };
 		A44A9DC62AB2F50A00629301 /* BreadBookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9DC52AB2F50A00629301 /* BreadBookTests.swift */; };
@@ -81,7 +83,6 @@
 		A44A9E972AB32DE300629301 /* OnLoadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9E962AB32DE300629301 /* OnLoadExtension.swift */; };
 		A44A9E9A2AB32E5600629301 /* SearchTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9E992AB32E5600629301 /* SearchTextField.swift */; };
 		A44A9E9E2AB3320200629301 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9E9D2AB3320200629301 /* FeedItem.swift */; };
-		A44A9EA32AB3351100629301 /* FeedFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9EA22AB3351100629301 /* FeedFilterViewModel.swift */; };
 		A44A9EA52AB3358300629301 /* EmptySearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9EA42AB3358300629301 /* EmptySearchView.swift */; };
 		A44A9EA72AB3444A00629301 /* FeedTopic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9EA62AB3444A00629301 /* FeedTopic.swift */; };
 		A44A9EA92AB3497000629301 /* CommentItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44A9EA82AB3497000629301 /* CommentItem.swift */; };
@@ -170,6 +171,8 @@
 		82E10726FE2C21DC5DFC8207 /* Pods_BreadBookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BreadBookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A449E5092AB483D3005E9EE7 /* View+UUIDs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+UUIDs.swift"; sourceTree = "<group>"; };
 		A449E50B2AB48864005E9EE7 /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		A449E50D2AB4B96E005E9EE7 /* CommentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentModel.swift; sourceTree = "<group>"; };
+		A449E50F2AB4B9B0005E9EE7 /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		A44A9DB12AB2F50700629301 /* BreadBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BreadBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44A9DB82AB2F50900629301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A44A9DBB2AB2F50900629301 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -240,7 +243,6 @@
 		A44A9E962AB32DE300629301 /* OnLoadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnLoadExtension.swift; sourceTree = "<group>"; };
 		A44A9E992AB32E5600629301 /* SearchTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTextField.swift; sourceTree = "<group>"; };
 		A44A9E9D2AB3320200629301 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
-		A44A9EA22AB3351100629301 /* FeedFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedFilterViewModel.swift; sourceTree = "<group>"; };
 		A44A9EA42AB3358300629301 /* EmptySearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySearchView.swift; sourceTree = "<group>"; };
 		A44A9EA62AB3444A00629301 /* FeedTopic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTopic.swift; sourceTree = "<group>"; };
 		A44A9EA82AB3497000629301 /* CommentItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentItem.swift; sourceTree = "<group>"; };
@@ -350,6 +352,38 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A449E5112AB4BBA1005E9EE7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A449E5122AB4BBBF005E9EE7 /* Response */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A449E5122AB4BBBF005E9EE7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				A449E50D2AB4B96E005E9EE7 /* CommentModel.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		A449E5132AB4BED6005E9EE7 /* FeedWriteCommentView */ = {
+			isa = PBXGroup;
+			children = (
+				A44A9EAE2AB34B0E00629301 /* FeedWriteCommentView.swift */,
+			);
+			path = FeedWriteCommentView;
+			sourceTree = "<group>";
+		};
+		A449E5142AB4BEE1005E9EE7 /* UserActivityTypeView */ = {
+			isa = PBXGroup;
+			children = (
+				A44A9EAA2AB34A7700629301 /* UserActivityTypeView.swift */,
+			);
+			path = UserActivityTypeView;
+			sourceTree = "<group>";
+		};
 		A44A9DA82AB2F50600629301 = {
 			isa = PBXGroup;
 			children = (
@@ -451,6 +485,7 @@
 		A44A9DE22AB2F5C600629301 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				A44A9E9D2AB3320200629301 /* FeedItem.swift */,
 				A44A9EA62AB3444A00629301 /* FeedTopic.swift */,
 				A44A9EA82AB3497000629301 /* CommentItem.swift */,
 			);
@@ -521,7 +556,6 @@
 				A44A9E3F2AB3141700629301 /* Coordinators */,
 				A44A9E202AB3076C00629301 /* Comment */,
 				A44A9DED2AB2F6AD00629301 /* PostDetails */,
-				A44A9E862AB329B000629301 /* LottieView.swift */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -530,8 +564,8 @@
 			isa = PBXGroup;
 			children = (
 				A44A9DFD2AB2F8DF00629301 /* Model */,
-				A44A9DF82AB2F8AA00629301 /* ViewModel */,
 				A44A9DF72AB2F8A700629301 /* View */,
+				A44A9DF82AB2F8AA00629301 /* ViewModel */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -539,7 +573,8 @@
 		A44A9DED2AB2F6AD00629301 /* PostDetails */ = {
 			isa = PBXGroup;
 			children = (
-				A44A9E1B2AB306D300629301 /* viewModel */,
+				A449E5112AB4BBA1005E9EE7 /* Model */,
+				A44A9E1B2AB306D300629301 /* ViewModel */,
 				A44A9E1A2AB306D000629301 /* View */,
 			);
 			path = PostDetails;
@@ -549,15 +584,14 @@
 			isa = PBXGroup;
 			children = (
 				A44A9EB92AB34EE500629301 /* Reply */,
-				A44A9EB42AB34DBB00629301 /* ReactionCountView */,
-				A44A9E982AB32E4800629301 /* SearchTextField */,
-				A44A9E8F2AB32CE100629301 /* Loading Indicators */,
 				A44A9E8A2AB32BE100629301 /* FilterChips */,
 				A44A9E7E2AB325F600629301 /* PostView */,
 				A44A9E722AB3246C00629301 /* Toast */,
-				A44A9EA22AB3351100629301 /* FeedFilterViewModel.swift */,
-				A44A9EAA2AB34A7700629301 /* UserActivityTypeView.swift */,
-				A44A9EAE2AB34B0E00629301 /* FeedWriteCommentView.swift */,
+				A449E5142AB4BEE1005E9EE7 /* UserActivityTypeView */,
+				A449E5132AB4BED6005E9EE7 /* FeedWriteCommentView */,
+				A44A9EB42AB34DBB00629301 /* ReactionCountView */,
+				A44A9E982AB32E4800629301 /* SearchTextField */,
+				A44A9E8F2AB32CE100629301 /* Loading Indicators */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -574,7 +608,7 @@
 		A44A9DF02AB2F76400629301 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				A44A9E692AB31F7D00629301 /* BreadBook Alert View */,
+				A44A9E692AB31F7D00629301 /* BreadBookAlertView */,
 				A44A9E602AB31CE900629301 /* ErrorView */,
 				A44A9E332AB311FE00629301 /* NavigationAppearance.swift */,
 				A44A9EA42AB3358300629301 /* EmptySearchView.swift */,
@@ -590,9 +624,9 @@
 		A44A9DF12AB2F79E00629301 /* Helper Classes */ = {
 			isa = PBXGroup;
 			children = (
+				A44A9E022AB2FDD700629301 /* Extensions */,
 				A44A9E422AB3145800629301 /* Constants */,
 				A44A9E3C2AB3137A00629301 /* Pod Hepler */,
-				A44A9E022AB2FDD700629301 /* Extensions */,
 				A44A9E382AB312D100629301 /* AccentColorSetter.swift */,
 				A44A9E3A2AB3133400629301 /* Color+ExtensionToUIColor.swift */,
 				A44A9E472AB3161500629301 /* UIApplication+keyboardDismisser.swift */,
@@ -632,7 +666,6 @@
 			isa = PBXGroup;
 			children = (
 				A44A9DFE2AB2F8E600629301 /* Responses */,
-				A44A9E9D2AB3320200629301 /* FeedItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -640,6 +673,7 @@
 		A44A9DFE2AB2F8E600629301 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
+				A449E50F2AB4B9B0005E9EE7 /* PostModel.swift */,
 			);
 			path = Responses;
 			sourceTree = "<group>";
@@ -703,12 +737,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		A44A9E1B2AB306D300629301 /* viewModel */ = {
+		A44A9E1B2AB306D300629301 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				A45F86752AB397F000A21924 /* PostViewModel.swift */,
 			);
-			path = viewModel;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A44A9E202AB3076C00629301 /* Comment */ = {
@@ -739,11 +773,11 @@
 		A44A9E272AB30EF600629301 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				A44A9ED62AB35FC500629301 /* MultiPart */,
-				A44A9ED12AB35D6600629301 /* Outputs */,
+				A44A9EC22AB35C6700629301 /* BaseNetwork */,
 				A44A9ECC2AB35D1D00629301 /* JSONNetworkCalls */,
 				A44A9EC72AB35CB900629301 /* Inputs */,
-				A44A9EC22AB35C6700629301 /* BaseNetwork */,
+				A44A9ED12AB35D6600629301 /* Outputs */,
+				A44A9ED62AB35FC500629301 /* MultiPart */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -760,6 +794,7 @@
 		A44A9E3C2AB3137A00629301 /* Pod Hepler */ = {
 			isa = PBXGroup;
 			children = (
+				A44A9E862AB329B000629301 /* LottieView.swift */,
 				A44A9E3D2AB3138A00629301 /* NetfoxHelper.swift */,
 			);
 			path = "Pod Hepler";
@@ -806,8 +841,8 @@
 		A44A9E552AB3190D00629301 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
-				A44A9E592AB3192800629301 /* ViewModel */,
 				A44A9E582AB3192400629301 /* View */,
+				A44A9E592AB3192800629301 /* ViewModel */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -837,7 +872,7 @@
 			path = ErrorView;
 			sourceTree = "<group>";
 		};
-		A44A9E692AB31F7D00629301 /* BreadBook Alert View */ = {
+		A44A9E692AB31F7D00629301 /* BreadBookAlertView */ = {
 			isa = PBXGroup;
 			children = (
 				A44A9E6A2AB31F8E00629301 /* BreadBookAlertView.swift */,
@@ -845,7 +880,7 @@
 				A44A9E6C2AB31FBB00629301 /* AlertView.swift */,
 				A44A9E702AB31FFB00629301 /* ActivityIndicator.swift */,
 			);
-			path = "BreadBook Alert View";
+			path = BreadBookAlertView;
 			sourceTree = "<group>";
 		};
 		A44A9E722AB3246C00629301 /* Toast */ = {
@@ -1322,7 +1357,6 @@
 				A44A9E242AB3077D00629301 /* CommentView.swift in Sources */,
 				A44A9EA52AB3358300629301 /* EmptySearchView.swift in Sources */,
 				A44A9E5B2AB3196C00629301 /* SplashScreenViewModel.swift in Sources */,
-				A44A9EA32AB3351100629301 /* FeedFilterViewModel.swift in Sources */,
 				A44A9E7D2AB325CF00629301 /* View+SafeArea.swift in Sources */,
 				A44A9E5D2AB31C8100629301 /* BaseViewModel.swift in Sources */,
 				A44A9ECE2AB35D3100629301 /* BaseAPIClient.swift in Sources */,
@@ -1386,9 +1420,11 @@
 				A44A9E9E2AB3320200629301 /* FeedItem.swift in Sources */,
 				A44A9E4E2AB317A900629301 /* Color.swift in Sources */,
 				A44A9E2F2AB30FF900629301 /* BreadBookAPIClient.swift in Sources */,
+				A449E5102AB4B9B0005E9EE7 /* PostModel.swift in Sources */,
 				A44A9E1D2AB306E500629301 /* PostDetailsView.swift in Sources */,
 				A44A9DFA2AB2F8C000629301 /* FeedViewModel.swift in Sources */,
 				A44A9E6B2AB31F8E00629301 /* BreadBookAlertView.swift in Sources */,
+				A449E50E2AB4B96E005E9EE7 /* CommentModel.swift in Sources */,
 				A44A9EC12AB3504600629301 /* CommentBubbleView.swift in Sources */,
 				A44A9EB82AB34E1A00629301 /* ReactionCountViewModel.swift in Sources */,
 				A44A9E872AB329B000629301 /* LottieView.swift in Sources */,

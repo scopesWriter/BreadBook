@@ -43,7 +43,7 @@ struct SearchTextField<TrailingContent: View>: View {
                 .opacity(inputText.isEmpty ? 1:0)
             
             if shouldShowClear {
-            textField
+                textField
                     .modifier(TextFieldClearButton(text: $inputText, hasTrailingItems: hasTrailingItems))
             } else {
                 textField
@@ -70,7 +70,7 @@ struct SearchTextField<TrailingContent: View>: View {
             self.onCommit?()
         })
         .introspectTextField { textfield in
-          textfield.returnKeyType = .search
+            textfield.returnKeyType = .search
         }
         .multilineTextAlignment(.leading)
         .disableAutocorrection(true)
@@ -88,7 +88,7 @@ struct TextFieldClearButton: ViewModifier {
     func body(content: Content) -> some View {
         HStack {
             content
-
+            
             if !text.isEmpty {
                 Button {
                     print("clear search")

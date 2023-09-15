@@ -1,6 +1,6 @@
 //
-//  MedSultoAPIClient.swift
-//  MedSulto
+//  BreadBookAPIClient.swift
+//  BreadBook
 //
 //  Created by Gamal Mostafa on 24/01/2022.
 //  Copyright © 2022 Limitless Care. All rights reserved.
@@ -9,10 +9,9 @@
 import Foundation
 
 class BreadBookAPIClient: BaseAPIClient {
-
+    
     convenience init() {
-        let baseURL: String = "https://gorest.co.in/public/v2/"
-        self.init(baseUrl: baseURL)
+        self.init(baseUrl: Constants.baseURL)
     }
     
     func fetchNewsFeed() async -> Result<FeedItems, Error> {

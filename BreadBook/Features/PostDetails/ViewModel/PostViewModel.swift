@@ -121,12 +121,9 @@ class PostViewModel: BaseViewModel, ObservableObject {
                 hasReplies: false,
                 comment: .init(
                     author: comment.name,
-                    subSpecialites: "",
                     body: comment.body,
-                    date: "",
                     hasMenu: true,
                     reactionsVMs: reactionsVMs,
-                    isSending: false,
                     onMenuTap: {},
                     onAuthorTap: {}
                 )

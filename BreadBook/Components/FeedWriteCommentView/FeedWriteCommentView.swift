@@ -5,7 +5,6 @@
 //  Created by Bishoy Badea [Pharma] on 14/09/2023.
 //
 
-import Foundation
 import SwiftUI
 
 struct FeedWriteCommentView: View {
@@ -53,6 +52,6 @@ struct FeedWriteCommentView: View {
         .frame(maxWidth: .infinity)
         .fixedSize(horizontal: false, vertical: true)
     }
-
+    
 }
 

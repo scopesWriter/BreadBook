@@ -8,6 +8,7 @@
 import Foundation
 
 extension Date {
+    
     func timeAgoDisplay(justReturnDate: Bool? = false) -> String {
         
         let calendar = Calendar.current

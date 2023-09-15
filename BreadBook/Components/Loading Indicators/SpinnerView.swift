@@ -52,10 +52,10 @@ struct SpinnerView: View {
         .onAppear {
             DispatchQueue.main.async {
                 withAnimation(Animation.linear(duration: configuration.speed)
-                                .delay(configuration.delay)
-                                .repeatForever(autoreverses: false)) {
-                    self.isAnimating = true
-                }
+                    .delay(configuration.delay)
+                    .repeatForever(autoreverses: false)) {
+                        self.isAnimating = true
+                    }
             }
             
         }

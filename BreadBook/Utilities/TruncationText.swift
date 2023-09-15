@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TruncatingText: View {
+    
     @State private var expanded: Bool = false
     @State private var truncated: Bool = false
     
@@ -55,7 +56,7 @@ struct TruncatingText: View {
     }
     var seeMoreLessButton: some View {
         Button(action: {
-                self.expanded.toggle()
+            self.expanded.toggle()
         }) {
             Text(self.expanded ? "see less" : "...see more")
                 .font(BreadBookFont.createFont(weight: .regular, size: 9))

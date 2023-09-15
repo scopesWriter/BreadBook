@@ -14,10 +14,10 @@ extension View {
 }
 
 struct RoundedCorner: Shape {
-
+    
     var radius: CGFloat = .infinity
     var corners: UIRectCorner = .allCorners
-
+    
     func path(in rect: CGRect) -> Path {
         let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         return Path(path.cgPath)
@@ -61,7 +61,7 @@ struct RoundedEdge: ViewModifier {
     let width: CGFloat
     let color: Color
     let cornerRadius: CGFloat
-
+    
     func body(content: Content) -> some View {
         content.cornerRadius(cornerRadius - width)
             .padding(width)
@@ -74,6 +74,6 @@ extension View {
     public func addBorder<S>(_ content: S, width: CGFloat = 1, cornerRadius: CGFloat) -> some View where S : ShapeStyle {
         let roundedRect = RoundedRectangle(cornerRadius: cornerRadius)
         return clipShape(roundedRect)
-             .overlay(roundedRect.strokeBorder(content, lineWidth: width))
+            .overlay(roundedRect.strokeBorder(content, lineWidth: width))
     }
 }

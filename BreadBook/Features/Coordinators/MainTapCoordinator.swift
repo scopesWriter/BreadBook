@@ -12,29 +12,7 @@ final class MainTabCoordinator: TabCoordinatable {
     
     var child: TabChild
     
-    // Feed
-    @Route(tabItem: makeFeedTab, onTapped: onFeedTapped) var feed = makeFeed
-    @ViewBuilder private func makeFeedTab(isActive: Bool) -> some View {
-        Image(Icon.feed.rawValue)
-        Text("BreadFast")
-    }
-    private func makeFeed() -> NavigationViewCoordinator<FeedCoordinator> {
-        NavigationViewCoordinator(FeedCoordinator())
-    }
-    
-    private func onFeedTapped(_ isRepeat: Bool, coordinator: NavigationViewCoordinator<FeedCoordinator>) {
-        if isRepeat {
-            if coordinator.child.stack.currentRoute == -1 {
-                NotificationCenter.default.post(
-                    name: Notification.Name(
-                        "\(Constants.scrollToTopOfViewNotificationName)\("Feed")"),
-                    object: nil
-                )
-            }
-            coordinator.child.popToRoot()
-        }
-    }
-    
+    // MARK: - Init
     init() {
         Theme.navigationBarColors(background: UIColor(Color.mintGreen), titleColor: .white)
         
@@ -48,13 +26,42 @@ final class MainTabCoordinator: TabCoordinatable {
         setupTabBarAppearance()
     }
     
+    deinit {
+        print("Deinit MainTabCoordinator")
+    }
+    
+    // Feed
+    @Route(tabItem: makeFeedTab, onTapped: onFeedTapped) var feed = makeFeed
+    @ViewBuilder private func makeFeedTab(isActive: Bool) -> some View {
+        Image(Icon.feed.rawValue)
+        Text("BreadFast")
+    }
+    private func makeFeed() -> NavigationViewCoordinator<FeedCoordinator> {
+        NavigationViewCoordinator(FeedCoordinator())
+    }
+    
+    // pop to root
+    private func onFeedTapped(_ isRepeat: Bool, coordinator: NavigationViewCoordinator<FeedCoordinator>) {
+        if isRepeat {
+            if coordinator.child.stack.currentRoute == -1 {
+                NotificationCenter.default.post(
+                    name: Notification.Name(
+                        "\(Constants.scrollToTopOfViewNotificationName)\("Feed")"),
+                    object: nil
+                )
+            }
+            coordinator.child.popToRoot()
+        }
+    }
+    
+    // MARK: - Setup appearance
     private func setupTabBarAppearance() {
         let itemAppearance = UITabBarItemAppearance()
-        itemAppearance.normal.iconColor = UIColor(Color.gray)
-        itemAppearance.selected.iconColor = UIColor(Color.primaryVariant2)
+        itemAppearance.normal.iconColor = UIColor(Color.mintGreen)
+        itemAppearance.selected.iconColor = UIColor(Color.mintGreen)
         
         itemAppearance.normal.titleTextAttributes = [.font: BreadBookUIFont.createFont(weight: .medium, size: 12)]
-        itemAppearance.selected.titleTextAttributes = [.font: BreadBookUIFont.createFont(weight: .bold, size: 12)]
+        itemAppearance.selected.titleTextAttributes = [.font: BreadBookUIFont.createFont(weight: .medium, size: 12)]
         
         let shadowImage = UIImage.gradientImageWithBounds(
             bounds: CGRect(x: 0, y: 0, width: UIScreen.main.scale, height: 8),
@@ -65,6 +72,7 @@ final class MainTabCoordinator: TabCoordinatable {
         )
         
         let appearance = UITabBarAppearance()
+        appearance.selectionIndicatorTintColor = UIColor(Color.mintGreen)
         appearance.configureWithTransparentBackground()
         appearance.shadowColor = .clear
         appearance.shadowImage = shadowImage
@@ -79,7 +87,4 @@ final class MainTabCoordinator: TabCoordinatable {
         }
     }
     
-    deinit {
-        print("Deinit MainTabCoordinator")
-    }
 }

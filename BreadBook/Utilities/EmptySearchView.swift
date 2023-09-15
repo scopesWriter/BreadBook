@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct EmptySearchView: View {
+    
+    // MARK: properties
     let title: String
     let subTitle: String
     let image: String
@@ -28,9 +30,9 @@ struct EmptySearchView: View {
                     .font(BreadBookFont.createFont(weight: .regular, size: 14))
                     .foregroundColor(Color.black)
                 if !subTitle.isEmpty {
-                Text(subTitle)
-                    .font(BreadBookFont.createFont(weight: .medium, size: 14))
-                    .foregroundColor(Color.black)
+                    Text(subTitle)
+                        .font(BreadBookFont.createFont(weight: .medium, size: 14))
+                        .foregroundColor(Color.black)
                 }
                 
             }
@@ -38,7 +40,7 @@ struct EmptySearchView: View {
             .padding([.top,.horizontal], 30)
             Spacer()
         }
-
+        
     }
 }
 

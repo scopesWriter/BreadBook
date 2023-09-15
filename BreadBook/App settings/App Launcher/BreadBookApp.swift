@@ -36,5 +36,5 @@ struct BreadBookApp: App {
                 .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
         }
     }
-
+    
 }

@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ImageViewerView: View {
-
+    
     let image: Image
-
+    
     @State private var scale: CGFloat = 1
     @State private var lastScale: CGFloat = 1
-
+    
     @State private var offset: CGPoint = .zero
     @State private var lastTranslation: CGSize = .zero
     @Binding var isImagePresented: Bool
@@ -22,7 +22,7 @@ struct ImageViewerView: View {
         self.image = image
         _isImagePresented = isImagePresented
     }
-
+    
     public var body: some View {
         GeometryReader { proxy in
             ZStack(alignment: .topTrailing) {
@@ -49,13 +49,13 @@ struct ImageViewerView: View {
             }
         }
     }
-
+    
     private func makeMagnificationGesture(size: CGSize) -> some Gesture {
         MagnificationGesture()
             .onChanged { value in
                 let delta = value / lastScale
                 lastScale = value
-
+                
                 // To minimize jittering
                 if abs(1 - delta) > 0.01 {
                     scale *= delta
@@ -71,7 +71,7 @@ struct ImageViewerView: View {
                 adjustMaxOffset(size: size)
             }
     }
-
+    
     private func makeDragGesture(size: CGSize) -> some Gesture {
         DragGesture()
             .onChanged { value in
@@ -86,21 +86,21 @@ struct ImageViewerView: View {
                 adjustMaxOffset(size: size)
             }
     }
-
+    
     private func adjustMaxOffset(size: CGSize) {
         let maxOffsetX = (size.width * (scale - 1)) / 2
         let maxOffsetY = (size.height * (scale - 1)) / 2
-
+        
         var newOffsetX = offset.x
         var newOffsetY = offset.y
-
+        
         if abs(newOffsetX) > maxOffsetX {
             newOffsetX = maxOffsetX * (abs(newOffsetX) / newOffsetX)
         }
         if abs(newOffsetY) > maxOffsetY {
             newOffsetY = maxOffsetY * (abs(newOffsetY) / newOffsetY)
         }
-
+        
         let newOffset = CGPoint(x: newOffsetX, y: newOffsetY)
         if newOffset != offset {
             withAnimation {

@@ -20,10 +20,4 @@ class AppDelegate: NSObject, ObservableObject, UIApplicationDelegate, UNUserNoti
         print(error.localizedDescription)
     }
     
-    // MARK: This method will be called when app received push notifications in foreground
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        NotificationCenter.default.post(name: NSNotification.Name(Constants.gotNewNotification), object: nil)
-        completionHandler([.list, .banner, .badge, .sound])
-    }
-
 }

@@ -33,38 +33,25 @@ struct CommentBubbleView: View {
                     
                 }
                 
-                if !viewModel.subSpecialites.isEmpty {
-                    Text(viewModel.subSpecialites)
-                        .font(BreadBookFont.createFont(weight: .regular, size: 10))
-                        .foregroundColor(Color.neutral600)
-                }
+                Text("15/9/2023")
+                    .font(BreadBookFont.createFont(weight: .regular, size: 8))
+                    .foregroundColor(Color.neutral600)
+                    .padding(.top, 3)
                 
-                if viewModel.isSending {
-                    Text("Sending...")
-                        .font(BreadBookFont.createFont(weight: .regular, size: 10))
-                        .foregroundColor(Color.neutral600)
-                        .padding(.top, 3)
-                   
-                } else {
-                    Text(viewModel.date)
-                        .font(BreadBookFont.createFont(weight: .regular, size: 8))
-                        .foregroundColor(Color.neutral600)
-                        .padding(.top, 3)
-                }
             }
-                                       
+            
             TruncatingText(viewModel.body, lineLimit: 2)
                 .font(BreadBookFont.createFont(weight: .regular, size: 10))
                 .foregroundColor(Color.originalBlack)
             
             HStack(alignment: .center, spacing: 10) {
-
-                    Spacer()
-                    
-                    ForEach(viewModel.reactionsVMs) { reactionVM in
-                        ReactionCountView(style: .small, viewModel: reactionVM)
-                    }
-                    
+                
+                Spacer()
+                
+                ForEach(viewModel.reactionsVMs) { reactionVM in
+                    ReactionCountView(style: .small, viewModel: reactionVM)
+                }
+                
                 
             }
             .frame(minHeight: ReactionCountView.Style.small.size.icon)
@@ -83,7 +70,6 @@ struct CommentBubbleView_Previews: PreviewProvider {
     
     static let vm: CommentBubbleViewModel = {
         var vm = CommentBubbleViewModel.example
-        vm.isSending = true
         return vm
     }()
     

@@ -34,7 +34,7 @@ struct FeedPostView: View {
                             UserActivityTypeView(activityLogType:
                                                     "\(ActivityUserWrapper.shared.activityUser.getActivityType(type: post.activityLogType!)) post",
                                                  activityLogTime: post.activityLogTime ?? "")
-                                .padding(.top, 8)
+                            .padding(.top, 8)
                             
                             Divider()
                         }
@@ -45,8 +45,7 @@ struct FeedPostView: View {
                         }
                         
                     }
-                    commentsSection
-                   
+                    
                     if showWriteCommentSection {
                         FeedWriteCommentView()
                             .padding(.top, 5)
@@ -66,11 +65,10 @@ struct FeedPostView: View {
         
     }
     
-    // MARK: - Helper views
     // MARK: Title View
     private var titleView: some View {
         HStack {
-                Spacer().frame(width: 20)
+            Spacer().frame(width: 20)
             
             HStack(alignment: .top) {
                 NetworkImageView(withURL: post.authorImage,
@@ -78,15 +76,8 @@ struct FeedPostView: View {
                                  aspectRatio: false,
                                  backgroundColor: Color.background,
                                  placeholderImageName: Icon.profilePlaceholderImage.rawValue)
-                    .frame(width: 28, height: 28)
-                    .clipShape(Circle())
-                    .gesture(
-                        TapGesture().onEnded({ _ in
-//                            if (post.authorId != user?.user?.id) {
-//                                viewProfileAction()
-//                            }
-                        })
-                    )
+                .frame(width: 28, height: 28)
+                .clipShape(Circle())
                 
                 VStack(alignment: .leading, spacing: 5) {
                     
@@ -94,13 +85,6 @@ struct FeedPostView: View {
                         Text(post.authorName)
                             .font(BreadBookFont.createFont(weight: .bold, size: 14))
                             .foregroundColor(Color.originalBlack)
-                            .gesture(
-                                TapGesture().onEnded({ _ in
-//                                    if (post.authorId != user?.user?.id) {
-//                                        viewProfileAction()
-//                                    }
-                                })
-                            )
                         
                         Spacer()
                         
@@ -127,7 +111,7 @@ struct FeedPostView: View {
                         .foregroundColor(Color.neutral600)
                 }
             }
-                Spacer(minLength: 0)
+            Spacer(minLength: 0)
             
             Spacer().frame(width: 20)
         }
@@ -152,7 +136,7 @@ struct FeedPostView: View {
     // MARK: Bottom View
     private var bottomView: some View {
         HStack(spacing: 0) {
-
+            
             HStack {
                 // reactions & comments
                 HStack(alignment: .center, spacing: 10) {
@@ -191,26 +175,15 @@ struct FeedPostView: View {
                 Spacer()
             }
             
-            if post.mediaList.count > 1 && post.type != .postWithTextOnly {
-                HStack(spacing: 3) {
-                    ForEach(0..<post.mediaList.count) { j in
-                        Circle()
-                            .fill(chosenIndex == j ? Color.primary: Color.neutral400)
-                            .frame(width: 6, height: 6)
-                    }
-                }
-                Spacer()
-            }
-            
             HStack {
                 Spacer()
                 Button(action: {}, label: {
                     Image(post.isBookmarked ? Icon.bookmarkFilled.rawValue
                           : Icon.bookmarkUnfilled.rawValue)
-                        .resizable()
-                        .frame(width: 27, height: 27)
-                        .foregroundColor(Color.originalBlack)
-
+                    .resizable()
+                    .frame(width: 27, height: 27)
+                    .foregroundColor(Color.originalBlack)
+                    
                 })
             }
             
@@ -218,26 +191,6 @@ struct FeedPostView: View {
         .padding(.horizontal, 15)
     }
         
-    private var commentsSection: some View {
-        VStack(spacing: 0) {
-//            ForEach(commentsItems) { item in
-//                // comment
-//                VStack(spacing: 0) {
-//                    Color.neutral200
-//                        .frame(height: 1)
-//                        .padding(.top, 10)
-//                    CommentView(viewModel: item.vm)
-//                }
-//                .id("\(item.id)-\(item.vm.comment.reactionsVMs.map { $0.count })-\(item.vm.comment.body)")
-//                // replies
-//                ForEach(item.replies) { replyVM in
-//                    ReplyView(viewModel: replyVM)
-//                }
-//            }
-        }
-        .fixedSize(horizontal: false, vertical: true)
-    }
-    
 }
 
 struct FitToAspectRatio: ViewModifier {

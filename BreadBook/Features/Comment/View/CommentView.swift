@@ -33,7 +33,6 @@ struct CommentView: View {
                         .frame(width: 1.7)
                         .cornerRadius(0.85)
                 }
-                
             }
             
             CommentBubbleView(viewModel: viewModel.comment)

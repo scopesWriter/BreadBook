@@ -15,14 +15,14 @@ struct LinkColoredText: View {
         case text(String)
         case link(String, URL)
     }
-
+    
     let text: String
     let components: [Component]
-
+    
     init(text: String, links: [NSTextCheckingResult]) {
         self.text = text
         let nsText = text as NSString
-
+        
         var components: [Component] = []
         var index = 0
         for result in links {
@@ -32,14 +32,14 @@ struct LinkColoredText: View {
             components.append(.link(nsText.substring(with: result.range), result.url!))
             index = result.range.location + result.range.length
         }
-
+        
         if index < nsText.length {
             components.append(.text(nsText.substring(from: index)))
         }
-
+        
         self.components = components
     }
-
+    
     var body: some View {
         components.map { component in
             switch component {
@@ -118,7 +118,7 @@ private struct LinkTapOverlay: UIViewRepresentable {
     
     class Coordinator: NSObject, UIGestureRecognizerDelegate {
         let overlay: LinkTapOverlay
-
+        
         let layoutManager = NSLayoutManager()
         let textContainer = NSTextContainer(size: .zero)
         var textStorage: NSTextStorage?
@@ -143,11 +143,11 @@ private struct LinkTapOverlay: UIViewRepresentable {
             guard let result = link(at: location) else {
                 return
             }
-
+            
             guard let url = result.url else {
                 return
             }
-
+            
             let safariVC = SFSafariViewController(url: url)
             safariVC.preferredControlTintColor = .white
             safariVC.preferredBarTintColor = UIColor(Color.primaryVariant)
@@ -158,13 +158,13 @@ private struct LinkTapOverlay: UIViewRepresentable {
             guard !overlay.links.isEmpty else {
                 return nil
             }
-
+            
             let indexOfCharacter = layoutManager.characterIndex(
                 for: point,
                 in: textContainer,
                 fractionOfDistanceBetweenInsertionPoints: nil
             )
-
+            
             return overlay.links.first { $0.range.contains(indexOfCharacter) }
         }
     }
@@ -175,7 +175,7 @@ private class LinkTapOverlayView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-
+        
         var newSize = bounds.size
         newSize.height += 20 // need some extra space here to actually get the last line
         textContainer.size = newSize

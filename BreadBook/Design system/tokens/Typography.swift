@@ -9,14 +9,6 @@ import SwiftUI
 
 extension Font {
     
-    static let heading1 = font(style: .heading1)
-    static let heading2 = font(style: .heading2)
-    static let subtitle1 = font(style: .subtitle1)
-    static let subtitle2 = font(style: .subtitle2)
-    static let body1 = font(style: .body1)
-    static let body2 = font(style: .body2)
-    static let body3 = font(style: .body3)
-    static let buttonAllCaps = font(style: .buttonAllCaps)
     static let button1 = font(style: .button1)
     static let button2 = font(style: .button2)
     static let button3 = font(style: .button3)
@@ -31,7 +23,7 @@ extension Font {
         let fontName = "\(family.rawValue)-\(style.weight.rawValue.capitalizingFirstLetter())"
         return Font.custom(fontName, size: style.size)
     }
-        
+    
 }
 
 extension UIFont {
@@ -61,11 +53,13 @@ extension UIFont {
     
 }
 
+// MARK: - Font Family
 enum TypographyFontFamily: String {
     case BwModelica
     case IBMPlexSans
 }
 
+// MARK: - Font Weight
 enum TypographyFontWeight: String {
     case black
     case blackItalic
@@ -84,6 +78,7 @@ enum TypographyFontWeight: String {
     case semiBold
 }
 
+// MARK: Style
 enum TypographyStyle {
     case heading1
     case heading2

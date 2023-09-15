@@ -13,10 +13,11 @@ enum LottieViewName: String {
 }
 
 struct LottieView: UIViewRepresentable {
+    
+    // MARK: - Variables
     var name: LottieViewName
     var loopMode: LottieLoopMode = .playOnce
     var completion: LottieCompletionBlock?
-    
     var animationView = LottieAnimationView()
     
     func makeUIView(context: UIViewRepresentableContext<LottieView>) -> UIView {

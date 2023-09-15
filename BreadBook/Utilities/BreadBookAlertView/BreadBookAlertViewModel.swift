@@ -13,7 +13,6 @@ struct BreadBookAlertViewModel {
     var title: String?
     var subtitle: String?
     var buttons: [BreadBookAlertViewButton]
-    
 }
 
 struct BreadBookAlertViewButton: Identifiable {

@@ -47,7 +47,7 @@ struct NetworkImageView: View {
         self.isImageEnabledToBePresented = isImageEnabledToPresented
         self.isClipped = isClipped
     }
-
+    
     var body: some View {
         if let height = height {
             if let width = width {
@@ -75,13 +75,13 @@ struct NetworkImageView: View {
             .background(backgroundColor)
             .onTapGesture {
                 
-                    isImagePresented = true
+                isImagePresented = true
                 
             }
             .fullScreenCover(isPresented: $isImagePresented) {
                 if let image = imageLoader.image {
                     ImageViewerView(image: Image(uiImage: image),
-                                       isImagePresented: $isImagePresented)
+                                    isImagePresented: $isImagePresented)
                 }
             }
             .disabled(!isImageEnabledToBePresented)
@@ -164,7 +164,7 @@ class ImageLoader: ObservableObject {
             }
             return
         }
-    
+        
         completion(data)
         
         DispatchQueue.main.async {

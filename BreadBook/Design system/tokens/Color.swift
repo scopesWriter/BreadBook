@@ -32,9 +32,4 @@ extension Color {
     static let originalBlack = Color("originalBlack")
     static let cardShadow = Color.black.opacity(0.11)
     
-    // Text
-    static let whiteText = Color.white
-    
-    static let primaryShades100 = Color("Button shaded background")
-
 }

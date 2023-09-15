@@ -12,7 +12,7 @@ struct ReplyView: View {
     
     var body: some View {
         HStack(alignment: .top, spacing: -0.5) {
-
+            
             Color.neutral200
                 .opacity(viewModel.hasNext ? 1 : 0)
                 .frame(width: 1.5)
@@ -24,7 +24,7 @@ struct ReplyView: View {
                     .stroke(Color.neutral200, style: .init(lineWidth: 1.8, lineCap: .round))
                     .frame(width: 72, height: 72)
                     .offset(y: -36)
-                                    
+                
                 HStack(alignment: .top, spacing: 5) {
                     
                     NetworkImageView(
@@ -60,7 +60,7 @@ struct ReplyView_Previews: PreviewProvider {
                 .frame(height: 155)
         }
         
-            .previewLayout(.sizeThatFits)
+        .previewLayout(.sizeThatFits)
     }
 }
 

@@ -8,6 +8,7 @@
 import SwiftUI
 
 class Theme {
+    
     static func navigationBarColors(background: UIColor?,
                                     titleColor: UIColor? = nil, tintColor: UIColor? = nil ) {
         
@@ -51,8 +52,8 @@ class Theme {
         UITableView.appearance().sectionFooterHeight = 0
         UITableView.appearance().separatorStyle = .none
         UITableView.appearance().separatorColor = .clear
-        UITableViewCell.appearance().backgroundColor = Color.background.uiColor()
-        UITableView.appearance().backgroundColor = Color.background.uiColor()
+        UITableViewCell.appearance().backgroundColor = UIColor(Color.background)
+        UITableView.appearance().backgroundColor = UIColor(Color.background)
     }
     
 }
@@ -65,6 +66,6 @@ func removeNavBarDefaultTheme() {
 func makeNavBarTransparent() {
     let appearance = UINavigationBarAppearance()
     appearance.configureWithTransparentBackground()
-
+    
     UINavigationBar.appearance().standardAppearance = appearance
 }

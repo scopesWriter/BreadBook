@@ -11,8 +11,8 @@ import PhotosUI
 
 class AccentColorSetter {
     static func setAccentColor() {
-        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(named: "primary")
-        UIView.appearance(whenContainedInInstancesOf: [UIImagePickerController.self]).tintColor = UIColor(named: "primary")
-        UIView.appearance(whenContainedInInstancesOf: [PHPickerViewController.self]).tintColor = UIColor(named: "primary")
+        UIView.appearance(whenContainedInInstancesOf: [UIAlertController.self]).tintColor = UIColor(Color.mintGreen)
+        UIView.appearance(whenContainedInInstancesOf: [UIImagePickerController.self]).tintColor = UIColor(Color.mintGreen)
+        UIView.appearance(whenContainedInInstancesOf: [PHPickerViewController.self]).tintColor = UIColor(Color.mintGreen)
     }
 }

@@ -80,12 +80,12 @@ struct AlertView: View {
 struct AlertView_Previews: PreviewProvider {
     static var previews: some View {
         let buttons: [BreadBookAlertViewButton] = [BreadBookAlertViewButton(title: "OK", action: {
-            print("Hello")
+            print("BreadBook Error")
         }, accessibilityId: ""),
-        BreadBookAlertViewButton(title: "OK", action: {
-            print("Hello")
+                                                   BreadBookAlertViewButton(title: "OK", action: {
+            print("BreadBook Error")
         }, accessibilityId: "", isCancellableAction: false),
-                                                  
+                                                   
         ]
         let alertViewModel = BreadBookAlertViewModel(
             title: "New UPDATE AVAILABLE!",

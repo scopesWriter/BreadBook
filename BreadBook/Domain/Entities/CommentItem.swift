@@ -53,33 +53,24 @@ class ReplyViewModel: ObservableObject {
 
 class CommentBubbleViewModel: ObservableObject {
     let author: String
-    let subSpecialites: String
     let body: String
-    let date: String
     let hasMenu: Bool
-    @Published var isSending: Bool = false
     @Published var reactionsVMs: [ReactionCountViewModel]
     let onMenuTap: () -> Void
     let onAuthorTap: () -> Void
     
     init(
         author: String,
-        subSpecialites: String,
         body: String,
-        date: String,
         hasMenu: Bool,
         reactionsVMs: [ReactionCountViewModel],
-        isSending: Bool,
         onMenuTap: @escaping () -> Void,
         onAuthorTap: @escaping() -> Void
     ) {
         self.author = author
-        self.subSpecialites = subSpecialites
         self.body = body
-        self.date = date
         self.hasMenu = hasMenu
         self.reactionsVMs = reactionsVMs
-        self.isSending = isSending
         self.onMenuTap = onMenuTap
         self.onAuthorTap = onAuthorTap
     }
@@ -97,9 +88,7 @@ extension CommentBubbleViewModel {
                 isSelected: false,
                 selectedImage: Icon.likeFilled.rawValue,
                 unselectedImage: Icon.likeUnfilled.rawValue,
-                onTapAction: { _ in
-                    //
-                }
+                onTapAction: { _ in }
             )
             ,
             .init(
@@ -109,72 +98,22 @@ extension CommentBubbleViewModel {
                 isIncremental: false,
                 selectedImage: Icon.comment.rawValue,
                 unselectedImage: Icon.comment.rawValue,
-                onTapAction: { _ in
-                    //
-                }
+                onTapAction: { _ in }
             )
         ]
         
         return .init(
-            author: "Dr. John Doe",
-            subSpecialites: "Dermatology | Gynocology | Diabetes",
+            author: "Bishoy Badie",
             body: """
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
             """,
-            date: "2 hrs ago",
             hasMenu: false,
             reactionsVMs: reactions,
-            isSending: false,
-            onMenuTap: {
-                
-            },
-            onAuthorTap: {
-                
-            }
+            onMenuTap: {},
+            onAuthorTap: {}
         )
-    }
-    
-}
-
-class ReactionCountViewModel: ObservableObject, Identifiable {
-    
-    let id: Int
-    @Published var count: Int
-    @Published var isSelected: Bool
-    let isIncremental: Bool
-    let isTapDisabled: Bool
-    let selectedImage: String
-    let unselectedImage: String
-    private let onTapAction: (_ isSelected: Bool) -> Void
-    
-    init(
-        id: Int,
-        count: Int,
-        isSelected: Bool,
-        isIncremental: Bool = true,
-        isTapDisabled: Bool = false,
-        selectedImage: String,
-        unselectedImage: String,
-        onTapAction: @escaping (_ isSelected: Bool) -> Void
-    ) {
-        self.id = id
-        self.count = count
-        self.isSelected = isSelected
-        self.isIncremental = isIncremental
-        self.isTapDisabled = isTapDisabled
-        self.selectedImage = selectedImage
-        self.unselectedImage = unselectedImage
-        self.onTapAction = onTapAction
-    }
-    
-    func toggle() {
-        if isIncremental {
-            count += isSelected ? -1 : 1
-        }
-        isSelected.toggle()
-        onTapAction(isSelected)
     }
     
 }
