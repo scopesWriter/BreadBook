@@ -15,8 +15,8 @@ final class MainTabCoordinator: TabCoordinatable {
     // Feed
     @Route(tabItem: makeFeedTab, onTapped: onFeedTapped) var feed = makeFeed
     @ViewBuilder private func makeFeedTab(isActive: Bool) -> some View {
-        Image(Icon.comment.rawValue)
-        Text("Feed")
+        Image(Icon.feed.rawValue)
+        Text("BreadFast")
     }
     private func makeFeed() -> NavigationViewCoordinator<FeedCoordinator> {
         NavigationViewCoordinator(FeedCoordinator())
@@ -36,7 +36,7 @@ final class MainTabCoordinator: TabCoordinatable {
     }
     
     init() {
-        Theme.navigationBarColors(background: UIColor(named: "Primary"), titleColor: .white)
+        Theme.navigationBarColors(background: UIColor(Color.mintGreen), titleColor: .white)
         
         self.child = {
             var paths: [AnyKeyPath] = []
@@ -50,7 +50,7 @@ final class MainTabCoordinator: TabCoordinatable {
     
     private func setupTabBarAppearance() {
         let itemAppearance = UITabBarItemAppearance()
-        itemAppearance.normal.iconColor = UIColor(Color.neutral400)
+        itemAppearance.normal.iconColor = UIColor(Color.gray)
         itemAppearance.selected.iconColor = UIColor(Color.primaryVariant2)
         
         itemAppearance.normal.titleTextAttributes = [.font: BreadBookUIFont.createFont(weight: .medium, size: 12)]

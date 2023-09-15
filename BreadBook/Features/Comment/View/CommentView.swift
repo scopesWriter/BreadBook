@@ -10,6 +10,7 @@ import SwiftUI
 import SwiftUI
 
 struct CommentView: View {
+    
     @StateObject var viewModel: CommentViewModel
     
     var body: some View {

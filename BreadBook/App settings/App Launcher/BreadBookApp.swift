@@ -11,7 +11,7 @@ import Stinsen
 @main
 struct BreadBookAppLauncher {
     static func main() {
-        Theme.navigationBarColors(background: Color.pink.uiColor(), titleColor: .white)
+        Theme.navigationBarColors(background: UIColor(Color.mintGreen), titleColor: .white)
         Theme.removeListSeparators()
         BreadBookApp.main()
     }

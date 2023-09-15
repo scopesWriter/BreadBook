@@ -13,60 +13,21 @@ final class FeedCoordinator: NavigationCoordinatable {
     let stack = NavigationStack(initial: \FeedCoordinator.start)
     lazy var routerStorable: FeedCoordinator = self
     
-    // Feed
+    // MARK: - Feed
     @Root var start = makeFeed
     @ViewBuilder private func makeFeed() -> some View {
         FeedView(viewModel: .init(withRepository: FeedRepository()))
     }
     
-    @Route(.push) var feed = makeFeedSearch
-    @ViewBuilder private func makeFeedSearch(input: (
-        searchKeyword: String?,
-        selectedFilterId: Int,
-        isClearSearch: ((Bool) -> Void)?,
-        goBack: (() -> Void)?
-    )) -> some View {
-        FeedView(
-            viewModel: .init(
-                withRepository: FeedRepository(),
-                searchKeyword: input.searchKeyword,
-                selectedFilterId: input.selectedFilterId
-            ),
-            isClearSearch: input.isClearSearch,
-            goBack: input.goBack
+    // MARK: - Post Details
+    @Route(.push) var post = makePost
+    @ViewBuilder private func makePost(post: FeedItemElement) -> some View {
+        PostDetailsView(
+            viewModel: .init(post: post)
         )
     }
-    func routeToFeedSearch(input: (
-        searchKeyword: String?,
-        selectedFilterId: Int,
-        isClearSearch: ((Bool) -> Void)?,
-        goBack: (() -> Void)?
-    )) {
-        self.route(to: \.feed, input)
+    func routeToPost(post: FeedItemElement) {
+        self.route(to: \.post, post)
     }
-    
-//    // Post
-//    @Route(.push) var post = makePost
-//    @ViewBuilder private func makePost(input: (
-//        id: Int,
-//        afterDeletionAction: (Int) -> Void,
-//        afterEditAction: (FeedItem) -> Void,
-//        onChange: (_ article: PostModel?, _ recentComments: [Comment]) -> Void
-//    )) -> some View {
-//        PostDetailsView(
-//            postId: input.id,
-//            reflectLike: input.onChange,
-//            isFromFeed: true,
-//            viewModel: .init(id: input.id, afterDeletionAction: input.afterDeletionAction, afterEditAction: input.afterEditAction, isFromProfile: false)
-//        )
-//    }
-//    func routeToPost(input: (
-//        id: Int,
-//        afterDeletionAction: (Int) -> Void,
-//        afterEditAction: (FeedItem) -> Void,
-//        onChange: (_ article: PostModel?, _ recentComments: [Comment]) -> Void
-//    )) {
-//        self.route(to: \.post, input)
-//    }
     
 }

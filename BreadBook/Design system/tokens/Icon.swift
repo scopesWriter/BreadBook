@@ -19,7 +19,6 @@ enum Icon: String {
     case profile
     case notification
     case like
-    case bookmark
     case errorImage
     case share = "Share"
     case play
@@ -65,6 +64,7 @@ enum Icon: String {
     case noImage = "No Image"
     case horizontalMenu
     case profilePlaceholderImage = "Profile Placeholder Image"
+    case bookmarkWhiteFiled = "Bookmark White Filled"
     case bookmarkFilled = "Bookmark Filled"
     case bookmarkUnfilled = "Bookmark Unfilled"
     case backButton = "Back Button"

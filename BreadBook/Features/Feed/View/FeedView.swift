@@ -45,11 +45,8 @@ struct FeedView: View {
             VStack(spacing: 0) {
                 if shouldShowSearch {
                     Spacer().frame(height: 16)
-                    if viewModel.searchKeyword == "" {
+
                         TopSearchViewBody
-                    } else {
-                        TopSearchViewBodyWithSearchKeyword
-                    }
                     
                     Spacer().frame(height: 20)
                 }
@@ -104,13 +101,8 @@ struct FeedView: View {
                     viewModel.didLoad.send()
                     viewModel.shouldLoadData = false
                 }
-                
-                if viewModel.reflectSearchActions {
-                    viewModel.didLoad.send()
-                    viewModel.reflectSearchActions = false
-                }
             })
-            .background(Color.mint)
+            .background(Color.mintGreen)
             .navigationBarHidden(true)
             .navigationBarTitle("", displayMode: .inline)
             
@@ -151,10 +143,10 @@ struct FeedView: View {
     private var TopSearchViewBody: some View {
         VStack(alignment: .leading) {
             Button {
-                viewModel.didTapOnSearch()
+                print("Tapped on search")
             } label: {
                 ZStack(alignment: .trailing) {
-                    SearchTextField("What are you looking for?", inputText: Binding<String>(get: {return ""}, set: { _ in}), onCommit: nil, trailingItem: {})
+                    SearchTextField("What are you looking for?", inputText: Binding<String>(get: { return "" }, set: { _ in}), onCommit: nil, trailingItem: {})
                         .disabled(true)
                 }
             }.frame(height: 50)
@@ -163,55 +155,7 @@ struct FeedView: View {
         }
         .padding([.horizontal], 19)
     }
-    
-    private var TopSearchViewBodyWithSearchKeyword: some View {
-        HStack(spacing: 0) {
-            Button {
-                if let goBack = goBack {
-                    goBack()
-                }
-                print("back")
-            } label: {
-                Image(systemName: "chevron.backward")
-                    .accentColor(.white)
-            }.padding(10)
-            
-            VStack(alignment: .leading) {
-                ZStack(alignment: .trailing) {
-                    SearchTextField( "What are you looking for?",
-                                     inputText: $viewModel.searchKeyword, onCommit: { }, shouldShowClear: false, trailingItem: {})
-                    .disabled(true)
-                    HStack {
-                        Button {
-                            if let goBack = goBack {
-                                goBack()
-                            }
-                        } label: {
-                            Text("")
-                                .frame(maxWidth: .infinity, maxHeight: 30)
-                        }
-                        
-                        Button {
-                            print("clear search")
-                            isClearSearch?(true)
-                            if let goBack = goBack {
-                                goBack()
-                            }
-                        } label: {
-                            HStack {
-                                Image(Icon.clearSearch.rawValue)
-                                    .resizable()
-                                    .frame(width: 30, height: 30)
-                                    .padding(10)
-                            }
-                        }.frame(height: 30)
-                    }
-                }
-                .padding([.trailing], 20)
-            }
-        }
-    }
-    
+        
     // MARK: - Feed List View
     private var feedListView: some View {
         return Group {
@@ -311,7 +255,7 @@ struct FeedView: View {
             switch item {
             case .item(let item):
                 self.createPostsSection([item], isFeatured: false)
-            default: AnyView{}
+                // created switch in case of existence of other feed types such as: article, seaarch, etc...
             }
         }
     }

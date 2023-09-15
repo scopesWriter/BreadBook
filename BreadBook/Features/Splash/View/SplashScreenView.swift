@@ -18,7 +18,7 @@ struct SplashScreenView: View {
             NavigationView {
                 ZStack {
                     BreadBookBaseView {
-                        Color.mint.edgesIgnoringSafeArea(.all)
+                        Color.mintGreen.edgesIgnoringSafeArea(.all)
                     }
                     
                     breadBookAnimation
@@ -49,7 +49,7 @@ struct SplashScreenView: View {
             })
             LottieView(name: LottieViewName.splashScreen,
                        loopMode: .loop, completion: nil)
-            .background(Color.mint)
+            .background(Color.mintGreen)
         }
     }
     

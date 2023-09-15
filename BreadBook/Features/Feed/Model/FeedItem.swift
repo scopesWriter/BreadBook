@@ -116,7 +116,7 @@ struct FeedItemElement: Codable {
 typealias FeedItems = [FeedItemElement]
 
 // MARK: - CommentElement
-struct CommentElement: Codable, Identifiable {
+struct CommentElement: Codable, Identifiable, Hashable {
     let id, postID: Int
     let name, email, body: String
 

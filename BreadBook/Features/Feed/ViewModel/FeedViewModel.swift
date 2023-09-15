@@ -17,19 +17,16 @@ class FeedViewModel: BaseViewModel, ObservableObject {
     @Published var isInitialLoad = true
     @Published var pullToRefresh: Bool?
     @Published var searchKeyword: String
-    @Published var replyingOnComment: Comment?
-    @Published var isPosting: Bool = false
     
+    // MARK: - Router
     @RouterObject var router: NavigationRouter<FeedCoordinator>?
-    var splashRouter: SplashCoordinator.Router? = RouterStore.shared.retrieve()
-    var mainRouter: MainTabCoordinator.Router? = RouterStore.shared.retrieve()
     
     // MARK: - Properties
     private let repo: FeedRepositoryProtocol
-    var selectedFilterId = 0
-    var reflectSearchActions = false
     var shouldLoadData: Bool
     var shouldShowWriteCommentSection: Bool
+    
+    // MARK: - Inputs
     let didLoad = PassthroughSubject<Void, Never>()
     var subscriptions = Set<AnyCancellable>()
     
@@ -46,18 +43,22 @@ class FeedViewModel: BaseViewModel, ObservableObject {
         self.searchKeyword = searchKeyword ?? ""
         
         self.shouldShowWriteCommentSection = true
-        self.selectedFilterId = selectedFilterId
         super.init()
         self.isLoading = false
         setupDidLoadBinding()
     }
     
-    func refresh() {
-        items.removeAll()
-        didLoad.send()
+    // MARK: - DeInit
+    deinit {
+        subscriptions.forEach { $0.cancel() }
+        subscriptions.removeAll()
     }
     
     // MARK: - Functions
+    func refresh() {
+        didLoad.send()
+    }
+    
     func checkIfEmptySearch() -> Bool {
         items.isEmpty &&
         !searchKeyword.isEmpty &&
@@ -117,40 +118,42 @@ extension FeedViewModel {
     }
 }
 
+// MARK: Binding
 extension FeedViewModel {
     func setupDidLoadBinding() {
-                didLoad
-                    .handleOutput { [weak self] _ in
-                        guard let self = self else { return }
-                        self.isLoadingFeedItems = true
-                    }
-                    .asyncMap { [weak self] _ -> Result<FeedItems, Error> in
-                        guard let self = self else { return .failure(AppError.empty) }
-                        return await self.repo.fetchNewsFeed()
-                    }
-                    .receive(on: DispatchQueue.main)
-                    .sink { [weak self] result in
-                        guard let self = self else { return }
-                        switch result {
-                        case .success(let items):
-                            dump(items)
-                            for item in items {
-                                if let itemToAppend = self.getPageItemType(item: item) {
-                                    self.items.append(itemToAppend)
-                                }
-                            }
-                        case .failure(let error):
-                            print("error getting newsfeed: \(error.localizedDescription)")
-                            if self.items.isEmpty { self.handleError() }
+        didLoad
+            .handleOutput { [weak self] _ in
+                guard let self = self else { return }
+                self.isLoadingFeedItems = true
+            }
+            .asyncMap { [weak self] _ -> Result<FeedItems, Error> in
+                guard let self = self else { return .failure(AppError.empty) }
+                return await self.repo.fetchNewsFeed()
+            }
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let items):
+                    dump(items)
+                    for item in items {
+                        if let itemToAppend = self.getPageItemType(item: item) {
+                            self.items.append(itemToAppend)
                         }
-                        self.isLoadingFeedItems = false
-                        self.isInitialLoad = false
-                        self.pullToRefresh = false
-                        self.objectWillChange.send()
                     }
-                    .store(in: &subscriptions)
+                case .failure(let error):
+                    print("error getting newsfeed: \(error.localizedDescription)")
+                    if self.items.isEmpty { self.handleError() }
+                }
+                self.isLoadingFeedItems = false
+                self.isInitialLoad = false
+                self.pullToRefresh = false
+                self.objectWillChange.send()
+            }
+            .store(in: &subscriptions)
     }
     
+    // MARK: - Mapper
     func getPageItemType(item: FeedItemElement) -> FeedItemViewModel? {
         if let item = self.createFeedItems([item]).first {
             return .item(item)

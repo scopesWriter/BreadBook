@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct FeedPostView: View {
+    
     // MARK: - Poperties
     @StateObject var post: FeedItem
     let commentsItems: [Comments]
     let showWriteCommentSection: Bool
+    
     // MARK: - Bindings
     @State var hasLimit: Bool = true
     @State var chosenIndex = 0
