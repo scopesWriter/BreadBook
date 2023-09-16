@@ -13,6 +13,7 @@ class FeedViewModel: BaseViewModel, ObservableObject {
     
     // MARK: - Data Sources
     @Published var items: [FeedItemViewModel] = []
+    @Published var testModel: FeedItems = []
     @Published var isLoadingFeedItems = false
     @Published var isInitialLoad = true
     @Published var pullToRefresh: Bool?
@@ -134,6 +135,8 @@ extension FeedViewModel {
                 switch result {
                 case .success(let items):
                     dump(items)
+                    // for Unit test
+                    self.testModel = items
                     for item in items {
                         if let itemToAppend = self.getPageItemType(item: item) {
                             self.items.append(itemToAppend)

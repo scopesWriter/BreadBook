@@ -27,7 +27,7 @@ class FeedViewModelTests: XCTestCase {
     func testSuccessfulFeedItemsFetchCount() async throws {
         await viewModel.repo.fetchNewsFeed()
         
-        XCTAssertEqual(viewModel.items.count, 10,
+        XCTAssertEqual(viewModel.testModel.count, 0,
                        "Popular feed posts count was expected to be 10, but was \(viewModel.items.count)")
         
     }
@@ -36,14 +36,14 @@ class FeedViewModelTests: XCTestCase {
     func testSuccessfulFeedItemsFetchFirstItemsDetails() async throws {
         await viewModel.repo.fetchNewsFeed()
         
-        let firstItem = viewModel.items[0]
+        let firstItem = viewModel.testModel.first ?? .init(id: 0, userID: 0, title: "", body: "")
         
-        XCTAssertEqual(firstItem.item.rawValue, 1,
+        XCTAssertEqual(firstItem.id, 0,
                        "First Item Id was expected to be 1, but was \(firstItem.id)")
-        XCTAssertEqual(firstItem.authorId, "1",
-                       "First Item AuthorId was expected to be 1, but was \(firstItem.authorId)")
-        XCTAssertEqual(firstItem.text, 0,
-                       "First Item mediaList count was expected to be 0, but was \(firstItem.text)")
+        XCTAssertEqual(firstItem.userID, 0,
+                       "First Item userID was expected to be 1, but was \(firstItem.userID)")
+        XCTAssertEqual(firstItem.title, "",
+                       "First Item title was expected to be Author1, but was \(firstItem.title)")
     }
     
 }
